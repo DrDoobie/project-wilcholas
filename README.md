@@ -4,14 +4,11 @@ Medieval RPG,
 3D with billboards,
 16 bit graphics,
 First person,
-Quest orientated,
-Magic,
-Different classes (warrior, archer, mage)
+Quest orientated
 
 Neccesary:
 1. Movement (crouching, jumping, walking, sprinting, etc.)
 2. Mouse Movement
 3. Player stats (health, stamina, mana)
-4. Simple classes (warrior, archer, mage)
-5. Simple melee, ranged, magic attacks
+5. Simple attacks
 
