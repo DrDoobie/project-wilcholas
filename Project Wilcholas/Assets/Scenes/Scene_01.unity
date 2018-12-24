@@ -704,6 +704,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d1f0ec28f4699343852af7b9701de9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isAlive: 0
   health: 100
   stamina: 100
   mana: 100
@@ -1092,7 +1093,7 @@ GameObject:
   - component: {fileID: 1355357308}
   m_Layer: 5
   m_Name: Stamina
-  m_TagString: Untagged
+  m_TagString: StaminaBar
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1360,7 +1361,7 @@ GameObject:
   - component: {fileID: 2010397580}
   m_Layer: 5
   m_Name: Health
-  m_TagString: Untagged
+  m_TagString: HealthBar
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1445,7 +1446,7 @@ GameObject:
   - component: {fileID: 2087684841}
   m_Layer: 5
   m_Name: Mana
-  m_TagString: Untagged
+  m_TagString: ManaBar
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

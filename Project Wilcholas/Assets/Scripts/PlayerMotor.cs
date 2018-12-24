@@ -15,7 +15,10 @@ public class PlayerMotor : MonoBehaviour
     }
 
     private void Update() {
-        MovementController();
+        if(GameObject.FindWithTag("Player").GetComponent<PlayerStats>().isAlive)
+        {
+            MovementController();
+        }
     }
 
     private void MovementController() {

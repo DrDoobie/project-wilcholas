@@ -13,7 +13,10 @@ public class MouseLook : MonoBehaviour
     }
 
     private void Update() {
-        LookController();
+        if(GameObject.FindWithTag("Player").GetComponent<PlayerStats>().isAlive)
+        {
+            LookController();
+        }
     }
 
     private void CursorLock() {

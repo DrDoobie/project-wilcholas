@@ -5,26 +5,49 @@ using UnityEngine.UI;
 
 public class PlayerStats : MonoBehaviour {
 
-	[SerializeField] private float health, stamina, mana, statLimit;
-	[SerializeField] private Slider healthBar, staminaBar, manaBar;
+	[HideInInspector] public bool isAlive;
+	[SerializeField] private float health = 100.0f, stamina = 100.0f, mana = 100.0f, statLimit = 100.0f;
+	private Slider healthBar, staminaBar, manaBar;
 	
-	private void Start () {
+	private void Awake () {
 		SetValues();
 	}
 
 	private void Update () {
-		StatController();
+		if(isAlive)
+		{
+			StatController();
+		}
 	}
 
 	private void SetValues () {
+		isAlive = true;
+
+		//Set sliders up
+		healthBar = GameObject.FindWithTag("HealthBar").GetComponent<Slider>();
+		staminaBar = GameObject.FindWithTag("StaminaBar").GetComponent<Slider>();
+		manaBar = GameObject.FindWithTag("ManaBar").GetComponent<Slider>();
+
+		//Set stat bar max values
 		healthBar.maxValue = statLimit;
 		staminaBar.maxValue = statLimit;
 		manaBar.maxValue = statLimit;
 	}
 
 	private void StatController () {
+		//Update stat bar values
 		healthBar.value = health;
 		staminaBar.value = stamina;
 		manaBar.value = mana;
+
+		if(health <= 0)
+		{
+			Die();
+		}
+	}
+
+	public void Die () {
+		Debug.Log("You died!");
+		isAlive = false;
 	}
 }
