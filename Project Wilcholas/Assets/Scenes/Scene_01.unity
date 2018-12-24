@@ -993,6 +993,21 @@ Prefab:
       propertyPath: basicAttackForce
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 20098582510577084, guid: eacc82b7478e2f5449ac2a91db96c507,
+        type: 2}
+      propertyPath: m_BackGroundColor.r
+      value: 0.5778747
+      objectReference: {fileID: 0}
+    - target: {fileID: 20098582510577084, guid: eacc82b7478e2f5449ac2a91db96c507,
+        type: 2}
+      propertyPath: m_BackGroundColor.g
+      value: 0.66766167
+      objectReference: {fileID: 0}
+    - target: {fileID: 20098582510577084, guid: eacc82b7478e2f5449ac2a91db96c507,
+        type: 2}
+      propertyPath: m_BackGroundColor.b
+      value: 0.8113208
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eacc82b7478e2f5449ac2a91db96c507, type: 2}
   m_IsPrefabAsset: 0
@@ -1303,7 +1318,7 @@ GameObject:
   - component: {fileID: 1574249381}
   - component: {fileID: 1574249380}
   m_Layer: 0
-  m_Name: Directional Light
+  m_Name: Sun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
