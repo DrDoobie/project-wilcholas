@@ -123,6 +123,7 @@ GameObject:
   - component: {fileID: 49636779}
   - component: {fileID: 49636781}
   - component: {fileID: 49636780}
+  - component: {fileID: 49636782}
   m_Layer: 5
   m_Name: Crosshair
   m_TagString: Untagged
@@ -182,6 +183,20 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 49636778}
   m_CullTransparentMesh: 0
+--- !u!114 &49636782
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 49636778}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1573420865, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 1, y: -1}
+  m_UseGraphicAlpha: 1
 --- !u!1 &327780823
 GameObject:
   m_ObjectHideFlags: 0
@@ -673,6 +688,29 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 708791210}
   m_CullTransparentMesh: 0
+--- !u!1 &718001698 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1397860497708942, guid: eacc82b7478e2f5449ac2a91db96c507,
+    type: 2}
+  m_PrefabInternal: {fileID: 404428022}
+--- !u!114 &718001699
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 718001698}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d1f0ec28f4699343852af7b9701de9d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
+  stamina: 100
+  mana: 100
+  statLimit: 100
+  healthBar: {fileID: 2010397580}
+  staminaBar: {fileID: 1355357308}
+  manaBar: {fileID: 2087684841}
 --- !u!1 &752745691
 GameObject:
   m_ObjectHideFlags: 0
