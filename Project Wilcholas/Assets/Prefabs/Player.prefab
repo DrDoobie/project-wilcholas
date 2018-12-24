@@ -134,7 +134,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkSpeed: 5
-  sprintSpeed: 7.5
+  sprintSpeed: 8
   jumpMultiplier: 10
   slopeForce: 2
   jumpCurve:
@@ -195,7 +195,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectile: {fileID: 1273168940958568, guid: 19e5e6620518c2d44a8e967d7a8e4aae, type: 2}
-  shootForce: 25
+  basicAttackForce: 25
+  attack1Cost: 10
 --- !u!114 &114869404171777866
 MonoBehaviour:
   m_ObjectHideFlags: 1
