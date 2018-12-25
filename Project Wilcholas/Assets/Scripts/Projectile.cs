@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Projectile : MonoBehaviour {
 
+	[SerializeField] private float damage;
 	[SerializeField] private float selfDestructTime;
 
 	void Start () {
@@ -12,5 +13,12 @@ public class Projectile : MonoBehaviour {
 
 	private void SelfDestruct (float value) {
 		Destroy(this.gameObject, value);
+	}
+
+	private void OnCollisionEnter (Collision col) {
+		if(col.gameObject.tag == "Enemy")
+		{
+			col.gameObject.GetComponent<HealthController>().SubtractHealth(damage);
+		}
 	}
 }

@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class HealthController : MonoBehaviour {
 
-	[SerializeField] private float health, maxHealth;
+	[SerializeField] private float health = 100.0f, maxHealth = 100.0f;
 	[SerializeField] private Slider healthBar;
 
 	private void Update () {
