@@ -25,6 +25,7 @@ public class PlayerMotor : MonoBehaviour
         if (IsSprinting())
         {
             movementSpeed = sprintSpeed;
+            GetComponent<PlayerStats>().stamina -= .2f;
 
         } else {
             movementSpeed = walkSpeed;
@@ -51,7 +52,10 @@ public class PlayerMotor : MonoBehaviour
     private bool IsSprinting() {
         if (Input.GetButton("Sprint"))
         {
-            return true;
+            if(GetComponent<PlayerStats>().stamina > 0)
+            {
+                return true;
+            }
         }
 
         return false;
@@ -77,7 +81,7 @@ public class PlayerMotor : MonoBehaviour
     }
 
     private void Jump() {
-        if (Input.GetButtonDown("Jump") && !isJumping)
+        if (Input.GetButtonDown("Jump") && !isJumping && (GetComponent<PlayerStats>().stamina > 0))
         {
             isJumping = true;
             StartCoroutine(JumpEvent());
@@ -95,6 +99,7 @@ public class PlayerMotor : MonoBehaviour
             //Jump happens here
             controller.Move((Vector3.up * jumpForce * jumpMultiplier) * Time.deltaTime);
             airTime += Time.deltaTime;
+            GetComponent<PlayerStats>().stamina -= 0.2f;
 
             yield return null;
 
