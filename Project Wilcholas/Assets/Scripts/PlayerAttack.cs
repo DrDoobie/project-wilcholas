@@ -20,7 +20,7 @@ public class PlayerAttack : MonoBehaviour {
 
 	private void BasicAttack () {
 		//Spawn projectile and add force
-		GameObject go = Instantiate(projectile);
+		GameObject go = Instantiate(projectile, (transform.position + Camera.main.transform.forward), (transform.rotation));
 		go.GetComponent<Rigidbody>().AddForce((transform.forward * shootForce) * 100.0f);
 	}
 }
