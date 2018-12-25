@@ -11,6 +11,6 @@ public class Projectile : MonoBehaviour {
 	}
 
 	private void SelfDestruct (float value) {
-		Destroy(this.gameObject, value)
+		Destroy(this.gameObject, value);
 	}
 }

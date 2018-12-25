@@ -27,14 +27,14 @@ public class PlayerStats : MonoBehaviour {
 		healthBar = GameObject.FindWithTag("HealthBar").GetComponent<Slider>();
 		staminaBar = GameObject.FindWithTag("StaminaBar").GetComponent<Slider>();
 		manaBar = GameObject.FindWithTag("ManaBar").GetComponent<Slider>();
+	}
 
+	private void StatController () {
 		//Set stat bar max values
 		healthBar.maxValue = statLimit;
 		staminaBar.maxValue = statLimit;
 		manaBar.maxValue = statLimit;
-	}
 
-	private void StatController () {
 		//Update stat bar values
 		healthBar.value = health;
 		staminaBar.value = stamina;
