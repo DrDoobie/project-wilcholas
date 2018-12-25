@@ -896,6 +896,26 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 114237433666829352, guid: eacc82b7478e2f5449ac2a91db96c507,
+        type: 2}
+      propertyPath: sprintSpeed
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 114869404171777866, guid: eacc82b7478e2f5449ac2a91db96c507,
+        type: 2}
+      propertyPath: health
+      value: 75
+      objectReference: {fileID: 0}
+    - target: {fileID: 114869404171777866, guid: eacc82b7478e2f5449ac2a91db96c507,
+        type: 2}
+      propertyPath: mana
+      value: 75
+      objectReference: {fileID: 0}
+    - target: {fileID: 114869404171777866, guid: eacc82b7478e2f5449ac2a91db96c507,
+        type: 2}
+      propertyPath: stamina
+      value: 75
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eacc82b7478e2f5449ac2a91db96c507, type: 2}
   m_IsPrefabAsset: 0

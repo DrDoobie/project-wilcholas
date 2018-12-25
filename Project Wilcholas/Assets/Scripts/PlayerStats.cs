@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class PlayerStats : MonoBehaviour {
 
 	[HideInInspector] public bool isAlive;
-	[SerializeField] private float health = 100.0f, stamina = 100.0f, mana = 100.0f, statLimit = 100.0f;
+	public float health = 100.0f, stamina = 100.0f, mana = 100.0f, statLimit = 100.0f;
 	private Slider healthBar, staminaBar, manaBar;
 	
 	private void Awake () {
@@ -17,6 +17,7 @@ public class PlayerStats : MonoBehaviour {
 		if(isAlive)
 		{
 			StatController();
+			RegenController();
 		}
 	}
 
@@ -30,6 +31,11 @@ public class PlayerStats : MonoBehaviour {
 	}
 
 	private void StatController () {
+		//Clamp stats
+		Mathf.Clamp(health, 0, statLimit);
+		Mathf.Clamp(stamina, 0, statLimit);
+		Mathf.Clamp(mana, 0, statLimit);
+
 		//Set stat bar max values
 		healthBar.maxValue = statLimit;
 		staminaBar.maxValue = statLimit;
@@ -44,6 +50,23 @@ public class PlayerStats : MonoBehaviour {
 		{
 			Die();
 		}
+	}
+
+	private void RegenController () {
+		float regenValue = 0.1f;
+
+		if(health < statLimit)
+		{
+			health += regenValue;
+		}
+			if(stamina < statLimit)
+			{
+				stamina += regenValue;
+			}
+				if(mana < statLimit)
+				{
+					mana += regenValue;
+				}
 	}
 
 	public void Die () {
