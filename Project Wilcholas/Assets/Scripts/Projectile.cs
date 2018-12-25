@@ -19,6 +19,7 @@ public class Projectile : MonoBehaviour {
 		if(col.gameObject.tag == "Enemy")
 		{
 			col.gameObject.GetComponent<HealthController>().SubtractHealth(damage);
+			Destroy(this.gameObject);
 		}
 	}
 }
