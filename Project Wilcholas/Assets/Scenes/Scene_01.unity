@@ -659,6 +659,7 @@ GameObject:
   - component: {fileID: 543826440}
   - component: {fileID: 543826442}
   - component: {fileID: 543826441}
+  - component: {fileID: 543826443}
   m_Layer: 5
   m_Name: Slot
   m_TagString: Untagged
@@ -718,6 +719,20 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 543826439}
   m_CullTransparentMesh: 0
+--- !u!114 &543826443
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 543826439}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1573420865, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 1, y: -1}
+  m_UseGraphicAlpha: 1
 --- !u!1 &577954449
 GameObject:
   m_ObjectHideFlags: 0
@@ -1029,6 +1044,7 @@ GameObject:
   - component: {fileID: 906677148}
   - component: {fileID: 906677150}
   - component: {fileID: 906677149}
+  - component: {fileID: 906677151}
   m_Layer: 5
   m_Name: Slot
   m_TagString: Untagged
@@ -1088,6 +1104,20 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 906677147}
   m_CullTransparentMesh: 0
+--- !u!114 &906677151
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 906677147}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1573420865, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 1, y: -1}
+  m_UseGraphicAlpha: 1
 --- !u!1 &981189051
 GameObject:
   m_ObjectHideFlags: 0
@@ -1252,6 +1282,7 @@ GameObject:
   - component: {fileID: 1029414698}
   - component: {fileID: 1029414700}
   - component: {fileID: 1029414699}
+  - component: {fileID: 1029414701}
   m_Layer: 5
   m_Name: Slot
   m_TagString: Untagged
@@ -1311,6 +1342,20 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1029414697}
   m_CullTransparentMesh: 0
+--- !u!114 &1029414701
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1029414697}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1573420865, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 1, y: -1}
+  m_UseGraphicAlpha: 1
 --- !u!1 &1108309621
 GameObject:
   m_ObjectHideFlags: 0
@@ -1684,7 +1729,7 @@ GameObject:
   - component: {fileID: 1699352890}
   - component: {fileID: 1699352891}
   m_Layer: 5
-  m_Name: Hotbar
+  m_Name: Inventory
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1828,6 +1873,7 @@ GameObject:
   - component: {fileID: 1833756808}
   - component: {fileID: 1833756810}
   - component: {fileID: 1833756809}
+  - component: {fileID: 1833756811}
   m_Layer: 5
   m_Name: Slot
   m_TagString: Untagged
@@ -1887,6 +1933,20 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1833756807}
   m_CullTransparentMesh: 0
+--- !u!114 &1833756811
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1833756807}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1573420865, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 1, y: -1}
+  m_UseGraphicAlpha: 1
 --- !u!1 &2010397578
 GameObject:
   m_ObjectHideFlags: 0
