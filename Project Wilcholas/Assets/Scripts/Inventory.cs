@@ -17,4 +17,17 @@ public class Inventory : MonoBehaviour {
 			slots.Add(inventory.GetChild(i).gameObject);
 		}
 	}
+
+	public void AddItem (GameObject obj) {
+		for(int i = 0; i < slots.Count; i++)
+		{
+			if(!slots[i].GetComponent<Slot>().isOccupied)
+			{
+				//Add item to inventory
+				obj.transform.parent = slots[i].transform;
+
+				break;
+			}
+		}
+	}
 }

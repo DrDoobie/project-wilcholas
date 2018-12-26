@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Item : MonoBehaviour {
 
+	[SerializeField] private GameObject sprite;
 	private Inventory inventory;
 
 	private void Start () {
@@ -14,19 +15,15 @@ public class Item : MonoBehaviour {
 		inventory = GameObject.FindWithTag("Player").GetComponent<Inventory>();
 	}
 
+	private void Add () {
+		inventory.AddItem(sprite);
+			Destroy(this.gameObject);
+	}
+
 	private void OnTriggerEnter (Collider other) {
 		if(other.tag == "Player")
 		{
-			for(int i = 0; i < inventory.slots.Count; i++)
-			{
-				if(!inventory.slots[i].GetComponent<Slot>().isOccupied)
-				{
-					//Add item to inventory
-					Destroy(this.gameObject);
-
-					break;
-				}
-			}
+			Add();
 		}
 	}
 }
