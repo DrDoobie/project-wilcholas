@@ -19,11 +19,11 @@ public class Item : MonoBehaviour {
 		{
 			for(int i = 0; i < inventory.slots.Count; i++)
 			{
-				if(inventory.slots[i].GetComponent<Slot>().isOccupied)
+				if(!inventory.slots[i].GetComponent<Slot>().isOccupied)
 				{
 					//Add item to inventory
 					Destroy(this.gameObject);
-					
+
 					break;
 				}
 			}
