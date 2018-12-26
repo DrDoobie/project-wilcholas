@@ -5,7 +5,7 @@ using UnityEngine;
 public class Inventory : MonoBehaviour {
 
 	[SerializeField] private Transform inventory;
-	[SerializeField] private List<GameObject> slots;
+	public List<GameObject> slots;
 
 	private void Start () {
 		SlotSetup();

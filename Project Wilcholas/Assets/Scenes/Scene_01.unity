@@ -20,11 +20,11 @@ RenderSettings:
   m_FogDensity: 0.01
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
-  m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
+  m_AmbientSkyColor: {r: 0.23673905, g: 0.3339267, b: 0.5283019, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
-  m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
+  m_AmbientGroundColor: {r: 0.03529412, g: 0.047058824, b: 0.043192796, a: 1}
   m_AmbientIntensity: 1
-  m_AmbientMode: 0
+  m_AmbientMode: 1
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
   m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
   m_HaloStrength: 0.5
@@ -37,7 +37,7 @@ RenderSettings:
   m_ReflectionBounces: 1
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
-  m_Sun: {fileID: 0}
+  m_Sun: {fileID: 1574249380}
   m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
@@ -234,7 +234,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4774723306431448, guid: 8568c2fcc98db9b4e8c761152fca1051, type: 2}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 114302532594496732, guid: 8568c2fcc98db9b4e8c761152fca1051,
         type: 2}
@@ -399,7 +399,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4119089659773942, guid: c1f536786bcdeda4abd5711b9b739f99, type: 2}
       propertyPath: m_RootOrder
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c1f536786bcdeda4abd5711b9b739f99, type: 2}
@@ -464,7 +464,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &421884959
 GameObject:
@@ -613,6 +613,7 @@ GameObject:
   - component: {fileID: 543826442}
   - component: {fileID: 543826441}
   - component: {fileID: 543826443}
+  - component: {fileID: 543826444}
   m_Layer: 5
   m_Name: Slot
   m_TagString: Untagged
@@ -686,6 +687,18 @@ MonoBehaviour:
   m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
   m_EffectDistance: {x: 1, y: -1}
   m_UseGraphicAlpha: 1
+--- !u!114 &543826444
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 543826439}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06bd18b2d7d8f344f8f9275953745367, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isOccupied: 0
 --- !u!1 &577954449
 GameObject:
   m_ObjectHideFlags: 0
@@ -757,7 +770,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4119089659773942, guid: c1f536786bcdeda4abd5711b9b739f99, type: 2}
       propertyPath: m_RootOrder
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 1477563863139906, guid: c1f536786bcdeda4abd5711b9b739f99, type: 2}
       propertyPath: m_Name
@@ -839,24 +852,6 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 708791210}
   m_CullTransparentMesh: 0
---- !u!1 &709125867 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1134369006753956, guid: eacc82b7478e2f5449ac2a91db96c507,
-    type: 2}
-  m_PrefabInternal: {fileID: 1028812499}
---- !u!114 &709125868
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 709125867}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 46c260fd658e64e45bf215408321ad22, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  inventory: {fileID: 1699352890}
-  slots: []
 --- !u!4 &718001701 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4485995993864590, guid: eacc82b7478e2f5449ac2a91db96c507,
@@ -1016,6 +1011,7 @@ GameObject:
   - component: {fileID: 906677150}
   - component: {fileID: 906677149}
   - component: {fileID: 906677151}
+  - component: {fileID: 906677152}
   m_Layer: 5
   m_Name: Slot
   m_TagString: Untagged
@@ -1089,6 +1085,18 @@ MonoBehaviour:
   m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
   m_EffectDistance: {x: 1, y: -1}
   m_UseGraphicAlpha: 1
+--- !u!114 &906677152
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 906677147}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06bd18b2d7d8f344f8f9275953745367, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isOccupied: 0
 --- !u!1 &981189051
 GameObject:
   m_ObjectHideFlags: 0
@@ -1174,7 +1182,7 @@ Transform:
   m_LocalScale: {x: 2, y: 1, z: 2}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1028812499
 Prefab:
@@ -1213,33 +1221,13 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4485995993864590, guid: eacc82b7478e2f5449ac2a91db96c507, type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
-    - target: {fileID: 114670042571494464, guid: eacc82b7478e2f5449ac2a91db96c507,
+    - target: {fileID: 114963517335263926, guid: eacc82b7478e2f5449ac2a91db96c507,
         type: 2}
-      propertyPath: basicAttackForce
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 20098582510577084, guid: eacc82b7478e2f5449ac2a91db96c507,
-        type: 2}
-      propertyPath: m_BackGroundColor.r
-      value: 0.5778747
-      objectReference: {fileID: 0}
-    - target: {fileID: 20098582510577084, guid: eacc82b7478e2f5449ac2a91db96c507,
-        type: 2}
-      propertyPath: m_BackGroundColor.g
-      value: 0.66766167
-      objectReference: {fileID: 0}
-    - target: {fileID: 20098582510577084, guid: eacc82b7478e2f5449ac2a91db96c507,
-        type: 2}
-      propertyPath: m_BackGroundColor.b
-      value: 0.8113208
-      objectReference: {fileID: 0}
-    - target: {fileID: 114670042571494464, guid: eacc82b7478e2f5449ac2a91db96c507,
-        type: 2}
-      propertyPath: attack1Cost
-      value: 5
-      objectReference: {fileID: 0}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 1699352890}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eacc82b7478e2f5449ac2a91db96c507, type: 2}
   m_IsPrefabAsset: 0
@@ -1254,6 +1242,7 @@ GameObject:
   - component: {fileID: 1029414700}
   - component: {fileID: 1029414699}
   - component: {fileID: 1029414701}
+  - component: {fileID: 1029414702}
   m_Layer: 5
   m_Name: Slot
   m_TagString: Untagged
@@ -1327,6 +1316,18 @@ MonoBehaviour:
   m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
   m_EffectDistance: {x: 1, y: -1}
   m_UseGraphicAlpha: 1
+--- !u!114 &1029414702
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1029414697}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06bd18b2d7d8f344f8f9275953745367, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isOccupied: 0
 --- !u!1 &1108309621
 GameObject:
   m_ObjectHideFlags: 0
@@ -1415,7 +1416,7 @@ RectTransform:
   - {fileID: 49636779}
   - {fileID: 2113185710}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1591,6 +1592,53 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.Slider+SliderEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!1001 &1355908787
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4830388652808470, guid: 9f6636171ca27bb44bf8b65387f35173, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4830388652808470, guid: 9f6636171ca27bb44bf8b65387f35173, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0.375
+      objectReference: {fileID: 0}
+    - target: {fileID: 4830388652808470, guid: 9f6636171ca27bb44bf8b65387f35173, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4830388652808470, guid: 9f6636171ca27bb44bf8b65387f35173, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4830388652808470, guid: 9f6636171ca27bb44bf8b65387f35173, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4830388652808470, guid: 9f6636171ca27bb44bf8b65387f35173, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4830388652808470, guid: 9f6636171ca27bb44bf8b65387f35173, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4830388652808470, guid: 9f6636171ca27bb44bf8b65387f35173, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 135820588255207964, guid: 9f6636171ca27bb44bf8b65387f35173,
+        type: 2}
+      propertyPath: m_Radius
+      value: 2
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 9f6636171ca27bb44bf8b65387f35173, type: 2}
+  m_IsPrefabAsset: 0
 --- !u!1 &1365798552
 GameObject:
   m_ObjectHideFlags: 0
@@ -1688,7 +1736,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1 &1699352889
 GameObject:
@@ -1845,6 +1893,7 @@ GameObject:
   - component: {fileID: 1833756810}
   - component: {fileID: 1833756809}
   - component: {fileID: 1833756811}
+  - component: {fileID: 1833756812}
   m_Layer: 5
   m_Name: Slot
   m_TagString: Untagged
@@ -1918,6 +1967,18 @@ MonoBehaviour:
   m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
   m_EffectDistance: {x: 1, y: -1}
   m_UseGraphicAlpha: 1
+--- !u!114 &1833756812
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1833756807}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06bd18b2d7d8f344f8f9275953745367, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isOccupied: 0
 --- !u!1 &2010397578
 GameObject:
   m_ObjectHideFlags: 0
