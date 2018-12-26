@@ -13,7 +13,8 @@ public class MouseLook : MonoBehaviour
     }
 
     private void Update() {
-        if(GameObject.FindWithTag("Player").GetComponent<PlayerStats>().isAlive)
+        if((GameObject.FindWithTag("Player").GetComponent<PlayerStats>().isAlive) && 
+        (!GameObject.FindWithTag("GameController").GetComponent<GameController>().isPaused))
         {
             LookController();
         }
