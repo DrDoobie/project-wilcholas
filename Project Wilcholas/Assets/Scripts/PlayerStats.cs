@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class PlayerStats : MonoBehaviour {
 
 	[HideInInspector] public bool isAlive;
-	public float health = 100.0f, stamina = 100.0f, mana = 100.0f, statLimit = 100.0f;
+	public float health = 100.0f, stamina = 100.0f, mana = 100.0f, statLimit = 100.0f, regenSpeed = 0.05f;
 	private Slider healthBar, staminaBar, manaBar;
 	
 	private void Awake () {
@@ -53,19 +53,17 @@ public class PlayerStats : MonoBehaviour {
 	}
 
 	private void RegenController () {
-		float regenValue = 0.1f;
-
 		if(health < statLimit)
 		{
-			health += regenValue;
+			health += regenSpeed;
 		}
 			if(stamina < statLimit)
 			{
-				stamina += regenValue;
+				stamina += regenSpeed;
 			}
 				if(mana < statLimit)
 				{
-					mana += regenValue;
+					mana += regenSpeed;
 				}
 	}
 
