@@ -17,7 +17,7 @@ public class PlayerStats : MonoBehaviour {
 		if(isAlive)
 		{
 			StatController();
-			RegenController();
+				RegenController();
 		}
 	}
 
@@ -26,25 +26,25 @@ public class PlayerStats : MonoBehaviour {
 
 		//Set sliders up
 		healthBar = GameObject.FindWithTag("HealthBar").GetComponent<Slider>();
-		staminaBar = GameObject.FindWithTag("StaminaBar").GetComponent<Slider>();
-		manaBar = GameObject.FindWithTag("ManaBar").GetComponent<Slider>();
+			staminaBar = GameObject.FindWithTag("StaminaBar").GetComponent<Slider>();
+				manaBar = GameObject.FindWithTag("ManaBar").GetComponent<Slider>();
 	}
 
 	private void StatController () {
 		//Clamp stats
 		Mathf.Clamp(health, 0, statLimit);
-		Mathf.Clamp(stamina, 0, statLimit);
-		Mathf.Clamp(mana, 0, statLimit);
+			Mathf.Clamp(stamina, 0, statLimit);
+				Mathf.Clamp(mana, 0, statLimit);
 
 		//Set stat bar max values
 		healthBar.maxValue = statLimit;
-		staminaBar.maxValue = statLimit;
-		manaBar.maxValue = statLimit;
+			staminaBar.maxValue = statLimit;
+				manaBar.maxValue = statLimit;
 
 		//Update stat bar values
 		healthBar.value = health;
-		staminaBar.value = stamina;
-		manaBar.value = mana;
+			staminaBar.value = stamina;
+				manaBar.value = mana;
 
 		if(health <= 0)
 		{
@@ -68,7 +68,7 @@ public class PlayerStats : MonoBehaviour {
 	}
 
 	public void Die () {
-		Debug.Log("You died!");
 		isAlive = false;
+			Debug.Log("You died!");
 	}
 }

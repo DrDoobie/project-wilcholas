@@ -5,22 +5,19 @@ using UnityEngine.AI;
 
 public class AIMotor : MonoBehaviour {
 
-	public Transform target;
+	[SerializeField] private Transform target;
 	private NavMeshAgent agent;
 
 	private void Start () {
-		SetValues();
+		agent = this.gameObject.GetComponent<NavMeshAgent>();
 	}
 
 	private void Update () {
 		MovementController();
 	}
 
-	private void SetValues () {
-		agent = this.gameObject.GetComponent<NavMeshAgent>();
-	}
-
 	private void MovementController () {
+		//If target exists, pursue 
 		if(target != null)
 		{
 			agent.SetDestination(target.position);

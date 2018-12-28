@@ -22,14 +22,15 @@ public class GameController : MonoBehaviour {
 
 			//Adjust cursor
 			Cursor.lockState = CursorLockMode.None;
-			Cursor.visible = true;
+				Cursor.visible = true;
 
 		} else {
+			//Continue time
 			Time.timeScale = 1.0f;
 
 			//Adjust cursor
 			Cursor.lockState = CursorLockMode.Locked;
-			Cursor.visible = false;
+				Cursor.visible = false;
 		}
 	}
 }

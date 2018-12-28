@@ -9,12 +9,13 @@ public class HealthController : MonoBehaviour {
 	[SerializeField] private Slider healthBar;
 
 	private void Update () {
-		UIController();
+		Controller();
 	}
 
-	private void UIController () {
+	private void Controller () {
+		//Set UI values
 		healthBar.maxValue = maxHealth;
-		healthBar.value = health;
+			healthBar.value = health;
 
 		if(health <= 0)
 		{

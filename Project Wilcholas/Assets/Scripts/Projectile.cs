@@ -16,10 +16,11 @@ public class Projectile : MonoBehaviour {
 	}
 
 	private void OnCollisionEnter (Collision col) {
+		//If collision with enemy is detected, deal damage
 		if(col.gameObject.tag == "Enemy")
 		{
 			col.gameObject.GetComponent<HealthController>().SubtractHealth(damage);
-			Destroy(this.gameObject);
+				Destroy(this.gameObject);
 		}
 	}
 }

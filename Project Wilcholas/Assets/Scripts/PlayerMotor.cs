@@ -25,7 +25,7 @@ public class PlayerMotor : MonoBehaviour
         if (IsSprinting())
         {
             movementSpeed = sprintSpeed;
-            GetComponent<PlayerStats>().stamina -= .2f;
+                GetComponent<PlayerStats>().stamina -= .2f;
 
         } else {
             movementSpeed = walkSpeed;
@@ -33,10 +33,10 @@ public class PlayerMotor : MonoBehaviour
 
         //Record horizontal and vertical input
         float vertInput = Input.GetAxis("Vertical");
-        float horizInput = Input.GetAxis("Horizontal");
+            float horizInput = Input.GetAxis("Horizontal");
 
         Vector3 forwardMovement = transform.forward * vertInput;
-        Vector3 sideMovement = transform.right * horizInput;
+            Vector3 sideMovement = transform.right * horizInput;
 
         //Move player with horizontal and vertical input
         controller.SimpleMove(Vector3.ClampMagnitude(forwardMovement + sideMovement, 1.0f) * movementSpeed);
@@ -84,22 +84,23 @@ public class PlayerMotor : MonoBehaviour
         if (Input.GetButtonDown("Jump") && !isJumping && (GetComponent<PlayerStats>().stamina > 0))
         {
             isJumping = true;
-            StartCoroutine(JumpEvent());
+                StartCoroutine(JumpEvent());
         }
     }
 
     private IEnumerator JumpEvent() {
         controller.slopeLimit = 90.0f;
-        float airTime = 0.0f;
+            float airTime = 0.0f;
 
         do
         {
             //Set jump force
             float jumpForce = jumpCurve.Evaluate(airTime);
+
             //Jump happens here
             controller.Move((Vector3.up * jumpForce * jumpMultiplier) * Time.deltaTime);
-            airTime += Time.deltaTime;
-            GetComponent<PlayerStats>().stamina -= 0.2f;
+                airTime += Time.deltaTime;
+                    GetComponent<PlayerStats>().stamina -= 0.2f;
 
             yield return null;
 
@@ -107,6 +108,6 @@ public class PlayerMotor : MonoBehaviour
         } while ((!controller.isGrounded) && (controller.collisionFlags != CollisionFlags.Above));
 
         controller.slopeLimit = 45.0f;
-        isJumping = false;
+            isJumping = false;
     }
 }

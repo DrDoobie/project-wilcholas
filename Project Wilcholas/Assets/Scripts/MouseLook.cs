@@ -28,7 +28,7 @@ public class MouseLook : MonoBehaviour
     {
         //Record mouse x and y movement
         float mouseX = Input.GetAxisRaw("Mouse X") * mouseSens;
-        float mouseY = Input.GetAxisRaw("Mouse Y") * mouseSens;
+            float mouseY = Input.GetAxisRaw("Mouse Y") * mouseSens;
 
         //Limit camera rotation
         xClamp += mouseY;
@@ -36,13 +36,13 @@ public class MouseLook : MonoBehaviour
         if (xClamp > 90.0f)
         {
             xClamp = 90.0f;
-            mouseY = 0.0f;
-            ClampXRotation(270.0f);
+                mouseY = 0.0f;
+                    ClampXRotation(270.0f);
 
         } else if (xClamp < -90.0f) {
             xClamp = -90.0f;
-            mouseY = 0.0f;
-            ClampXRotation(90.0f);
+                mouseY = 0.0f;
+                    ClampXRotation(90.0f);
         }
 
         //Rotate camera on Y axis
@@ -60,7 +60,7 @@ public class MouseLook : MonoBehaviour
 
     private void ClampXRotation(float value) {
         Vector3 eulerRot = transform.eulerAngles;
-        eulerRot.x = value;
-        transform.eulerAngles = eulerRot;
+            eulerRot.x = value;
+                transform.eulerAngles = eulerRot;
     }
 }
