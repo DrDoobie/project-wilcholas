@@ -968,6 +968,7 @@ GameObject:
   m_Component:
   - component: {fileID: 884368064}
   - component: {fileID: 884368063}
+  - component: {fileID: 884368065}
   m_Layer: 0
   m_Name: Game Controller
   m_TagString: GameController
@@ -1000,6 +1001,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &884368065
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 884368062}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4542f4006c7f76646b8521c8631086a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item:
+  - {fileID: 2044694637}
 --- !u!1 &906677147
 GameObject:
   m_ObjectHideFlags: 0
@@ -2059,6 +2073,11 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.Slider+SliderEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!1 &2044694637 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1903377604281062, guid: 9f6636171ca27bb44bf8b65387f35173,
+    type: 2}
+  m_PrefabInternal: {fileID: 1355908787}
 --- !u!1 &2087684839
 GameObject:
   m_ObjectHideFlags: 0

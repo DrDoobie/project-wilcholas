@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Item : MonoBehaviour {
+public class WorldItem : MonoBehaviour {
 
-	[SerializeField] private GameObject sprite;
+	[SerializeField] private int itemID;
 	private Inventory inventory;
+	private ItemDatabase itemDB;
 
 	private void Start () {
 		Setup();
@@ -13,10 +14,11 @@ public class Item : MonoBehaviour {
 
 	private void Setup () {
 		inventory = GameObject.FindWithTag("Player").GetComponent<Inventory>();
+		itemDB = GameObject.FindWithTag("GameController").GetComponent<ItemDatabase>();
 	}
 
 	private void Add () {
-		inventory.AddItem(sprite);
+		inventory.AddItem();
 			Destroy(this.gameObject);
 	}
 
