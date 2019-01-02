@@ -9,6 +9,7 @@ TagManager:
   - ManaBar
   - ExperienceBar
   - Enemy
+  - LevelIndicator
   layers:
   - Default
   - TransparentFX
