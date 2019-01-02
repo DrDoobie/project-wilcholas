@@ -26,9 +26,15 @@ public class PlayerExperience : MonoBehaviour {
 	}
 
 	private void LevelController () {
-		if(currentXp >= requiredXp)
+		if(currentXp == requiredXp)
 		{
 			LevelUp();
+
+		} else if (currentXp > requiredXp) {
+			//Add left over xp when leveling up
+			float val1 = (currentXp - requiredXp);
+				LevelUp();
+					currentXp += val1;
 		}
 	}
 
@@ -42,7 +48,7 @@ public class PlayerExperience : MonoBehaviour {
 	}
 
 	private void LevelUp () {
-		//Increment, reset, increase xp		!!!!! remember to come back here and make it so you don't lose some xp when leveling up !!!!!
+		//Increment, reset, increase xp
 		xpLevel ++;
 			currentXp = 0.0f;
 				requiredXp *= multiplier;
