@@ -5,13 +5,19 @@ using UnityEngine.UI;
 
 public class PlayerExperience : MonoBehaviour {
 
-	[SerializeField] private float xpLevel = 1.0f, requiredXp = 10.0f, currentXp = 0.0f;
+	[SerializeField] private float xpLevel = 1.0f, requiredXp = 10.0f, currentXp = 0.0f, multiplier = 1.25f;
 	private Slider xpBar;
 	private Text levelIndicator;
+	private PlayerStats playerStats;
 
 	private void Start () {
+		SetValues();
+	}
+
+	private void SetValues () {
 		xpBar = GameObject.FindWithTag("ExperienceBar").GetComponent<Slider>();
 			levelIndicator = GameObject.FindWithTag("LevelIndicator").GetComponent<Text>();
+				playerStats = GetComponent<PlayerStats>();
 	}
 
 	private void Update () {
@@ -36,12 +42,18 @@ public class PlayerExperience : MonoBehaviour {
 	}
 
 	private void LevelUp () {
-		//Increment level
+		//Increment, reset, increase xp		!!!!! remember to come back here and make it so you don't lose some xp when leveling up !!!!!
 		xpLevel ++;
-			//Reset xp
 			currentXp = 0.0f;
-				//Increase required xp by percentage
-				requiredXp *= 1.25f;
+				requiredXp *= multiplier;
+
+		//Increase stats
+		playerStats.statLimit *= multiplier;
+
+		//Reset stats
+		playerStats.health = playerStats.statLimit;
+			playerStats.stamina = playerStats.statLimit;
+				playerStats.mana = playerStats.statLimit;
 	}
 
 	public void AddXp (float value) {
