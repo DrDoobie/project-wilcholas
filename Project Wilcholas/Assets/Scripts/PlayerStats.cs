@@ -53,18 +53,11 @@ public class PlayerStats : MonoBehaviour {
 	}
 
 	private void RegenController () {
-		if(health < statLimit)
+		//If stat(s) are not full, then regenerate
+		if(stamina < statLimit)
 		{
-			health += regenSpeed;
+			stamina += regenSpeed;
 		}
-			if(stamina < statLimit)
-			{
-				stamina += regenSpeed;
-			}
-				if(mana < statLimit)
-				{
-					mana += regenSpeed;
-				}
 	}
 
 	public void Die () {
