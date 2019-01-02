@@ -43,4 +43,8 @@ public class PlayerExperience : MonoBehaviour {
 				//Increase required xp by percentage
 				requiredXp *= 1.25f;
 	}
+
+	public void AddXp (float value) {
+		currentXp += value;
+	}
 }

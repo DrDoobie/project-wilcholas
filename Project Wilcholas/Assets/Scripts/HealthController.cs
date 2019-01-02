@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class HealthController : MonoBehaviour {
 
-	[SerializeField] private float health = 100.0f, maxHealth = 100.0f;
+	[SerializeField] private float health = 100.0f, maxHealth = 100.0f, value = 1.0f;
 	[SerializeField] private Slider healthBar;
 
 	private void Update () {
@@ -24,7 +24,8 @@ public class HealthController : MonoBehaviour {
 	}
 
 	private void Die () {
-		Destroy(this.gameObject);
+		GameObject.FindWithTag("Player").GetComponent<PlayerExperience>().AddXp(value);
+			Destroy(this.gameObject);
 	}
 
 	public void SubtractHealth (float value)

@@ -1494,6 +1494,11 @@ Prefab:
       propertyPath: basicAttackCost
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114592155039118406, guid: eacc82b7478e2f5449ac2a91db96c507,
+        type: 2}
+      propertyPath: currentXp
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eacc82b7478e2f5449ac2a91db96c507, type: 2}
   m_IsPrefabAsset: 0
