@@ -9,18 +9,35 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1329534888148034}
+  m_RootGameObject: {fileID: 1797626175247160}
   m_IsPrefabAsset: 1
---- !u!1 &1211100488820010
+--- !u!1 &1797626175247160
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4087176554885882}
-  - component: {fileID: 212093033441561850}
-  - component: {fileID: 114251990742466720}
+  - component: {fileID: 4296853719181604}
+  - component: {fileID: 135522149178996974}
+  - component: {fileID: 114661081150340804}
+  m_Layer: 0
+  m_Name: Stamina_Potion
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1809365678434478
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4265170841169578}
+  - component: {fileID: 212670905980003250}
+  - component: {fileID: 114868614083527230}
   m_Layer: 0
   m_Name: Graphics
   m_TagString: Untagged
@@ -28,95 +45,78 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &1329534888148034
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4320488823304356}
-  - component: {fileID: 135722427068334282}
-  - component: {fileID: 114161397905026126}
-  m_Layer: 0
-  m_Name: Health_Potion
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4087176554885882
+--- !u!4 &4265170841169578
 Transform:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1211100488820010}
+  m_GameObject: {fileID: 1809365678434478}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
-  m_Father: {fileID: 4320488823304356}
+  m_Father: {fileID: 4296853719181604}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &4320488823304356
+--- !u!4 &4296853719181604
 Transform:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1329534888148034}
+  m_GameObject: {fileID: 1797626175247160}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.121144, y: 6.0568774e-18, z: -0.545555}
+  m_LocalPosition: {x: 7, y: 0.5, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 4087176554885882}
+  - {fileID: 4265170841169578}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114161397905026126
+--- !u!114 &114661081150340804
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1329534888148034}
+  m_GameObject: {fileID: 1797626175247160}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e60b26bfe5749904599452744aad2891, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   inventoryItem: 0
-  health: 1
+  health: 0
   stamina: 0
-  mana: 0
+  mana: 1
   value: 25
---- !u!114 &114251990742466720
+--- !u!114 &114868614083527230
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1211100488820010}
+  m_GameObject: {fileID: 1809365678434478}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9651f1b54a1906b44923ec35ab41fb3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!135 &135722427068334282
+--- !u!135 &135522149178996974
 SphereCollider:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1329534888148034}
+  m_GameObject: {fileID: 1797626175247160}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!212 &212093033441561850
+--- !u!212 &212670905980003250
 SpriteRenderer:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1211100488820010}
+  m_GameObject: {fileID: 1809365678434478}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -146,7 +146,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 592465bf9d56a7045b66c3e35529bb1f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 9b7b7824658d4734a921ced111cf26f2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
