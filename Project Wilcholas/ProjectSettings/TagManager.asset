@@ -10,6 +10,7 @@ TagManager:
   - ExperienceBar
   - Enemy
   - LevelIndicator
+  - EnemySpawner
   layers:
   - Default
   - TransparentFX
