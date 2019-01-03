@@ -59,7 +59,7 @@ public class PlayerStats : MonoBehaviour {
 			stamina += regenSpeed;
 		}
 	}
-
+	
 	public void Die () {
 		isAlive = false;
 			Debug.Log("You died!");
