@@ -50,7 +50,7 @@ public class PlayerMotor : MonoBehaviour
     }
 
     private bool IsSprinting() {
-        if (Input.GetButton("Sprint"))
+        if(Input.GetButton("Sprint"))
         {
             if(GetComponent<PlayerStats>().stamina > 0)
             {
