@@ -9,6 +9,7 @@ public class GameController : MonoBehaviour {
 	private void Update () {
 		PauseController();
 	}
+
 	private void PauseController () {
 		if(Input.GetButtonDown("Pause"))
 		{
@@ -34,3 +35,4 @@ public class GameController : MonoBehaviour {
 		}
 	}
 }
+
