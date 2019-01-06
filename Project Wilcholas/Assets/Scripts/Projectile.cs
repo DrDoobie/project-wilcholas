@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Projectile : MonoBehaviour {
 
+	public GameObject impactEffect;
 	[SerializeField] private float damage;
 	[SerializeField] private float selfDestructTime;
 
@@ -20,7 +21,8 @@ public class Projectile : MonoBehaviour {
 		if(col.gameObject.tag == "Enemy")
 		{
 			col.gameObject.GetComponent<HealthController>().SubtractHealth(damage);
-				Destroy(this.gameObject);
+				Instantiate(impactEffect, transform.position, transform.rotation);
+					Destroy(this.gameObject);
 		}
 	}
 }
