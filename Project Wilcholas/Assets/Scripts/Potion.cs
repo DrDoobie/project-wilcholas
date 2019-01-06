@@ -2,14 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Item : MonoBehaviour {
+public class Potion : MonoBehaviour {
 
-	[SerializeField] private bool inventoryItem;
-	[Header("Values")]
+	[SerializeField] private float value;
+	[Header("Type")]
 	[SerializeField] private bool health;
 	[SerializeField] private bool stamina;
 	[SerializeField] private bool mana;
-	[SerializeField] private float value;
 	private GameObject player;
 
 	private void Awake () {
@@ -17,13 +16,13 @@ public class Item : MonoBehaviour {
 	}
 
 	private void OnTriggerEnter (Collider other) {
-		if((!inventoryItem) && (other.tag == "Player"))
+		if(other.tag == "Player")
 		{
-			UseItem();
+			UsePotion();
 		}
 	}
 
-	private void UseItem () {
+	private void UsePotion () {
 		//Dirt code here, must clean later
 		if(health)
 		{

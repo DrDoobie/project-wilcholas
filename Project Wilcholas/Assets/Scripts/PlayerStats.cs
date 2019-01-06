@@ -32,9 +32,18 @@ public class PlayerStats : MonoBehaviour {
 
 	private void StatController () {
 		//Clamp stats
-		Mathf.Clamp(health, 0, statLimit);
-			Mathf.Clamp(stamina, 0, statLimit);
-				Mathf.Clamp(mana, 0, statLimit);
+		if(health > statLimit)
+		{
+			health = statLimit;
+		}
+			if(stamina > statLimit)
+			{
+				stamina = statLimit;
+			}
+				if(mana > statLimit)
+				{
+					mana = statLimit;
+				}
 
 		//Set stat bar max values
 		healthBar.maxValue = statLimit;
