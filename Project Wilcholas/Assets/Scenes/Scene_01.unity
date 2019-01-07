@@ -857,27 +857,6 @@ Prefab:
       propertyPath: m_Name
       value: 'Pillar '
       objectReference: {fileID: 0}
-    - target: {fileID: 4119089659773942, guid: c1f536786bcdeda4abd5711b9b739f99, type: 2}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: -85.00001
-      objectReference: {fileID: 0}
-    - target: {fileID: 1477563863139906, guid: c1f536786bcdeda4abd5711b9b739f99, type: 2}
-      propertyPath: m_Layer
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4119089659773942, guid: c1f536786bcdeda4abd5711b9b739f99, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4119089659773942, guid: c1f536786bcdeda4abd5711b9b739f99, type: 2}
-      propertyPath: m_LocalScale.z
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 23048197166618134, guid: c1f536786bcdeda4abd5711b9b739f99,
-        type: 2}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 026d1ed377b3ad94181b1e928a8cf3a7, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c1f536786bcdeda4abd5711b9b739f99, type: 2}
   m_IsPrefabAsset: 0
@@ -1268,6 +1247,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114492098476694796, guid: eacc82b7478e2f5449ac2a91db96c507,
+        type: 2}
+      propertyPath: spells.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4485995993864590, guid: eacc82b7478e2f5449ac2a91db96c507, type: 2}
       propertyPath: m_LocalPosition.x
       value: 18.5
@@ -1300,22 +1284,23 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 20098582510577084, guid: eacc82b7478e2f5449ac2a91db96c507,
+    - target: {fileID: 114492098476694796, guid: eacc82b7478e2f5449ac2a91db96c507,
         type: 2}
-      propertyPath: m_BackGroundColor.r
-      value: 0.2921858
+      propertyPath: spellEquipped
+      value: 
       objectReference: {fileID: 0}
-    - target: {fileID: 20098582510577084, guid: eacc82b7478e2f5449ac2a91db96c507,
+    - target: {fileID: 114492098476694796, guid: eacc82b7478e2f5449ac2a91db96c507,
         type: 2}
-      propertyPath: m_BackGroundColor.g
-      value: 0.5345837
+      propertyPath: spells.Array.data[0]
+      value: 
       objectReference: {fileID: 0}
-    - target: {fileID: 20098582510577084, guid: eacc82b7478e2f5449ac2a91db96c507,
+    - target: {fileID: 114492098476694796, guid: eacc82b7478e2f5449ac2a91db96c507,
         type: 2}
-      propertyPath: m_BackGroundColor.b
-      value: 0.9245283
+      propertyPath: spells.Array.data[1]
+      value: 
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114670042571494464, guid: eacc82b7478e2f5449ac2a91db96c507, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: eacc82b7478e2f5449ac2a91db96c507, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1 &1041829371

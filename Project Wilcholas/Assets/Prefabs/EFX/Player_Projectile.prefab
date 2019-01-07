@@ -101,7 +101,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   impactEffect: {fileID: 1649281749367428, guid: f10d126207df7ca499188784681de119,
     type: 2}
-  damage: 10
+  dmgPopup: {fileID: 1324299359626504, guid: ffd006e4c26ae644ba7b9238133143ad, type: 2}
+  minDamg: 12
+  maxDamg: 7
   selfDestructTime: 3
 --- !u!135 &135017888548022112
 SphereCollider:
@@ -4686,7 +4688,7 @@ ParticleSystemRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_RenderMode: 0
-  m_SortMode: 0
+  m_SortMode: 1
   m_MinParticleSize: 0
   m_MaxParticleSize: 0.5
   m_CameraVelocityScale: 0
