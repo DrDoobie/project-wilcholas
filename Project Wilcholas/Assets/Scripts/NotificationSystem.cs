@@ -12,13 +12,10 @@ public class NotificationSystem : MonoBehaviour {
 	}
 
 	private IEnumerator NotifLoop (string text) {
-		while(true)
-		{
-			notificationsText.text = text;
+		notificationsText.text = "You learned " + text + "!";
 
-			yield return new WaitForSeconds(1.0f);
+		yield return new WaitForSeconds(2.5f);
 
-			notificationsText.text = "";
-		}
+		notificationsText.text = "";
 	}
 }
