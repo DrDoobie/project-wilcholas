@@ -47,8 +47,8 @@ public class PlayerSpells : MonoBehaviour {
 	private void CastController () {
 		if(Input.GetButtonDown("Fire1"))
 		{
-			//Cast spell only if you have enough mana
-			if(GetComponent<PlayerStats>().mana > spellEquipped.cost)
+			//Cast only if there is a spell equipped
+			if(spellEquipped != null)
 			{
 				CastSpell();
 			}
@@ -56,7 +56,8 @@ public class PlayerSpells : MonoBehaviour {
 	}
 
 	private void CastSpell () {
-		if(spellEquipped != null)
+		//Cast spell only if you have enough mana
+		if(GetComponent<PlayerStats>().mana > spellEquipped.cost)
 		{
 			//Spawn projectile and add force
 			GameObject go = Instantiate(spellEquipped.gfx, (transform.position + Camera.main.transform.forward), (transform.rotation));
