@@ -11,7 +11,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3cd9c0c593ce28e4fb4899571dd1b342, type: 3}
   m_Name: Spell_2
   m_EditorClassIdentifier: 
-  spellName: Spell_2
+  spellName: Viridi Bomb
   gfx: {fileID: 1273168940958568, guid: 7addfa63e07280241882aa6afaa0fb19, type: 2}
   force: 1
   cost: 7
