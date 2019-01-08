@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Potion : MonoBehaviour {
+public class Consumable : MonoBehaviour {
 
 	[SerializeField] private float value;
 	[Header("Type")]

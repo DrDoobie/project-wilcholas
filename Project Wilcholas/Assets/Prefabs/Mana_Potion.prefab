@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4296853719181604}
   - component: {fileID: 135522149178996974}
-  - component: {fileID: 114661081150340804}
+  - component: {fileID: 114373513703224372}
   m_Layer: 0
   m_Name: Mana_Potion
   m_TagString: Untagged
@@ -91,7 +91,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &114661081150340804
+--- !u!114 &114373513703224372
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -99,13 +99,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1797626175247160}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e60b26bfe5749904599452744aad2891, type: 3}
+  m_Script: {fileID: 11500000, guid: 3d830520cf3ff044d8e858ecf610ff09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   value: 25
   health: 0
   stamina: 0
   mana: 1
+  xp: 0
 --- !u!114 &114868614083527230
 MonoBehaviour:
   m_ObjectHideFlags: 1

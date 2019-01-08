@@ -39,6 +39,7 @@ GameObject:
   - component: {fileID: 224752101849164060}
   - component: {fileID: 135132649966961686}
   - component: {fileID: 114641257601358362}
+  - component: {fileID: 114897366993239706}
   m_Layer: 0
   m_Name: Scroll_1
   m_TagString: Untagged
@@ -88,7 +89,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13b2bd54a1a00564f80a8464edab6e64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spell: {fileID: 11400000, guid: 0676691de112c9e43a804e4eecd99ae4, type: 2}
+  spell: {fileID: 11400000, guid: 1c7f0965dfba66e41b27bb92443cc7c3, type: 2}
+--- !u!114 &114897366993239706
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1665866694439784}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d830520cf3ff044d8e858ecf610ff09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  value: 3
+  health: 0
+  stamina: 0
+  mana: 0
+  xp: 1
 --- !u!114 &114918337393815716
 MonoBehaviour:
   m_ObjectHideFlags: 1

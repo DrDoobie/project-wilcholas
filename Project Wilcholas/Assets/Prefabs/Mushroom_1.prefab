@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4780582090485690}
   - component: {fileID: 135964694951703306}
-  - component: {fileID: 114147407352389868}
+  - component: {fileID: 114214691601685560}
   m_Layer: 0
   m_Name: Mushroom_1
   m_TagString: Untagged
@@ -72,7 +72,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: -84.999, z: 0}
---- !u!114 &114147407352389868
+--- !u!114 &114214691601685560
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -80,10 +80,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1441586010573366}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e60b26bfe5749904599452744aad2891, type: 3}
+  m_Script: {fileID: 11500000, guid: 3d830520cf3ff044d8e858ecf610ff09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: 3
+  value: 10
   health: 1
   stamina: 0
   mana: 0

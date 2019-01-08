@@ -38,7 +38,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4320488823304356}
   - component: {fileID: 135722427068334282}
-  - component: {fileID: 114161397905026126}
+  - component: {fileID: 114543909980475860}
   m_Layer: 0
   m_Name: Health_Potion
   m_TagString: Untagged
@@ -91,21 +91,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &114161397905026126
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1329534888148034}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e60b26bfe5749904599452744aad2891, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  value: 25
-  health: 1
-  stamina: 0
-  mana: 0
 --- !u!114 &114251990742466720
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -117,6 +102,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9651f1b54a1906b44923ec35ab41fb3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114543909980475860
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1329534888148034}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d830520cf3ff044d8e858ecf610ff09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  value: 25
+  health: 1
+  stamina: 0
+  mana: 0
+  xp: 0
 --- !u!135 &135722427068334282
 SphereCollider:
   m_ObjectHideFlags: 1

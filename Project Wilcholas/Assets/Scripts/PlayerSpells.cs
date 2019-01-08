@@ -6,9 +6,26 @@ public class PlayerSpells : MonoBehaviour {
 
 	public Spell spellEquipped;
 	public List<Spell> spells;
+	private int currentSpell;
 
 	private void Update () {
-		CastController();
+		SpellController();
+			CastController();
+	}
+
+	private void SpellController () {
+		var msw = Input.GetAxis("Mouse ScrollWheel");
+
+		if(msw > 0.0f)
+		{
+			currentSpell++;
+
+		} else if(msw < 0.0f) {
+			currentSpell--;
+		}
+		
+		spellEquipped = spells[currentSpell];
+			Debug.Log(currentSpell);
 	}
 
 	private void CastController () {
