@@ -20,6 +20,7 @@ public class Scroll : MonoBehaviour {
 
 	private void LearnScroll () {
 		player.GetComponent<PlayerSpells>().spells.Add(spell);
-			Destroy(this.gameObject);
+			GameObject.FindWithTag("GameController").GetComponent<NotificationSystem>().Notify(spell.spellName);
+				Destroy(this.gameObject);
 	}
 }

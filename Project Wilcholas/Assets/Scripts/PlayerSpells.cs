@@ -64,6 +64,7 @@ public class PlayerSpells : MonoBehaviour {
 
 			//Take mana
 			GetComponent<PlayerStats>().mana -= spellEquipped.cost;
+
 		}
 	}
 }

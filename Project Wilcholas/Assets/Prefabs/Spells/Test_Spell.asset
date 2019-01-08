@@ -11,6 +11,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3cd9c0c593ce28e4fb4899571dd1b342, type: 3}
   m_Name: Test_Spell
   m_EditorClassIdentifier: 
+  spellName: Test_Spell
   gfx: {fileID: 1273168940958568, guid: 19e5e6620518c2d44a8e967d7a8e4aae, type: 2}
   force: 2
   cost: 3
