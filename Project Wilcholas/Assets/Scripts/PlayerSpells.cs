@@ -14,18 +14,31 @@ public class PlayerSpells : MonoBehaviour {
 	}
 
 	private void SpellController () {
+		//Sort through spell list with mosue scroll wheel
 		var msw = Input.GetAxis("Mouse ScrollWheel");
 
+		//Positive scroll wheel movement
 		if(msw > 0.0f)
 		{
 			currentSpell++;
 
+		//Negative movement
 		} else if(msw < 0.0f) {
 			currentSpell--;
 		}
-		
-		spellEquipped = spells[currentSpell];
-			Debug.Log(currentSpell);
+
+		SpellClamp();
+			spellEquipped = spells[currentSpell];
+	}
+
+	private void SpellClamp () {
+		if(currentSpell < 0)
+		{	
+			currentSpell = (spells.Count - 1);
+
+		} else if(currentSpell >= spells.Count) {
+			currentSpell = 0;
+		}
 	}
 
 	private void CastController () {
