@@ -14,7 +14,11 @@ public class PlayerSpells : MonoBehaviour {
 	private void CastController () {
 		if(Input.GetButtonDown("Fire1"))
 		{
-			CastSpell();
+			//Cast spell only if you have enough mana
+			if(GetComponent<PlayerStats>().mana > spellEquipped.cost)
+			{
+				CastSpell();
+			}
 		}
 	}
 

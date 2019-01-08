@@ -1247,11 +1247,6 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 114492098476694796, guid: eacc82b7478e2f5449ac2a91db96c507,
-        type: 2}
-      propertyPath: spells.Array.size
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4485995993864590, guid: eacc82b7478e2f5449ac2a91db96c507, type: 2}
       propertyPath: m_LocalPosition.x
       value: 18.5
@@ -1284,24 +1279,7 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 114492098476694796, guid: eacc82b7478e2f5449ac2a91db96c507,
-        type: 2}
-      propertyPath: spellEquipped
-      value: 
-      objectReference: {fileID: 11400000, guid: 0676691de112c9e43a804e4eecd99ae4,
-        type: 2}
-    - target: {fileID: 114492098476694796, guid: eacc82b7478e2f5449ac2a91db96c507,
-        type: 2}
-      propertyPath: spells.Array.data[0]
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 114492098476694796, guid: eacc82b7478e2f5449ac2a91db96c507,
-        type: 2}
-      propertyPath: spells.Array.data[1]
-      value: 
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 114670042571494464, guid: eacc82b7478e2f5449ac2a91db96c507, type: 2}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eacc82b7478e2f5449ac2a91db96c507, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1 &1041829371

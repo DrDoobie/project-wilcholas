@@ -23,7 +23,6 @@ GameObject:
   - component: {fileID: 114237433666829352}
   - component: {fileID: 114869404171777866}
   - component: {fileID: 114592155039118406}
-  - component: {fileID: 114670042571494464}
   - component: {fileID: 114492098476694796}
   m_Layer: 9
   m_Name: Player
@@ -196,6 +195,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66781408d0c748b4087715e81e618afd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spellEquipped: {fileID: 11400000, guid: 0676691de112c9e43a804e4eecd99ae4, type: 2}
+  spells: []
 --- !u!114 &114592155039118406
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -211,20 +212,6 @@ MonoBehaviour:
   requiredXp: 10
   currentXp: 1
   multiplier: 1.25
---- !u!114 &114670042571494464
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1134369006753956}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec18802479ca14546892f40b6390f536, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  projectile: {fileID: 1273168940958568, guid: 19e5e6620518c2d44a8e967d7a8e4aae, type: 2}
-  basicAttackForce: 15
-  basicAttackCost: 1
 --- !u!114 &114869404171777866
 MonoBehaviour:
   m_ObjectHideFlags: 1

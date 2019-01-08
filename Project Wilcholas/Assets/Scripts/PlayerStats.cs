@@ -30,7 +30,7 @@ public class PlayerStats : MonoBehaviour {
 				manaBar = GameObject.FindWithTag("ManaBar").GetComponent<Slider>();
 	}
 
-	private void StatController () {
+	private void StatClamp () {
 		//Clamp stats
 		if(health > statLimit)
 		{
@@ -44,6 +44,10 @@ public class PlayerStats : MonoBehaviour {
 				{
 					mana = statLimit;
 				}
+	}
+
+	private void StatController () {
+		StatClamp();
 
 		//Set stat bar max values
 		healthBar.maxValue = statLimit;
