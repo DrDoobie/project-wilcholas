@@ -14,21 +14,24 @@ public class PlayerSpells : MonoBehaviour {
 	}
 
 	private void SpellController () {
-		//Sort through spell list with mosue scroll wheel
-		var msw = Input.GetAxis("Mouse ScrollWheel");
-
-		//Positive scroll wheel movement
-		if(msw > 0.0f)
+		if(spells.Count > 0)
 		{
-			currentSpell++;
+			//Sort through spell list with mosue scroll wheel
+			var msw = Input.GetAxis("Mouse ScrollWheel");
 
-		//Negative movement
-		} else if(msw < 0.0f) {
-			currentSpell--;
-		}
+			//Positive scroll wheel movement
+			if(msw > 0.0f)
+			{
+				currentSpell++;
 
-		SpellClamp();
+			//Negative movement
+			} else if(msw < 0.0f) {
+				currentSpell--;
+			}
+
+			SpellClamp();
 			spellEquipped = spells[currentSpell];
+		}
 	}
 
 	private void SpellClamp () {

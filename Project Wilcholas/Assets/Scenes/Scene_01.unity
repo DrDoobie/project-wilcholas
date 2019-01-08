@@ -1373,7 +1373,7 @@ Prefab:
     - target: {fileID: 114492098476694796, guid: eacc82b7478e2f5449ac2a91db96c507,
         type: 2}
       propertyPath: spells.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4485995993864590, guid: eacc82b7478e2f5449ac2a91db96c507, type: 2}
       propertyPath: m_LocalPosition.x
