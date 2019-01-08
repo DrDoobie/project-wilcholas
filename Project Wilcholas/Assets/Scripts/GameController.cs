@@ -5,6 +5,7 @@ using UnityEngine;
 public class GameController : MonoBehaviour {
 
 	[HideInInspector] public bool isPaused;
+	public int maxAI, currentAI;
 
 	private void Update () {
 		PauseController();

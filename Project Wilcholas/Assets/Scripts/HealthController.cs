@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class HealthController : MonoBehaviour {
 
+	[SerializeField] private bool ai;
 	[SerializeField] private float health = 100.0f, maxHealth = 100.0f, value = 1.0f;
 	[SerializeField] private Slider healthBar;
 
@@ -24,6 +25,11 @@ public class HealthController : MonoBehaviour {
 	}
 
 	private void Die () {
+		if(ai)
+		{
+			GameObject.FindWithTag("GameController").GetComponent<GameController>().currentAI--;
+		}
+
 		GameObject.FindWithTag("Player").GetComponent<PlayerExperience>().AddXp(value);
 			Destroy(this.gameObject);
 	}

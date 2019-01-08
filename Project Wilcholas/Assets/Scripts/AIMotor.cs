@@ -5,11 +5,13 @@ using UnityEngine.AI;
 
 public class AIMotor : MonoBehaviour {
 
-	[SerializeField] private Transform target;
+	private Transform target;
 	private NavMeshAgent agent;
 
-	private void Start () {
+	private void Awake () {
 		agent = this.gameObject.GetComponent<NavMeshAgent>();
+			target = GameObject.FindWithTag("Player").transform;
+				GameObject.FindWithTag("GameController").GetComponent<GameController>().currentAI++;
 	}
 
 	private void Update () {
