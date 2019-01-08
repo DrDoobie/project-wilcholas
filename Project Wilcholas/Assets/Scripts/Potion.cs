@@ -9,6 +9,7 @@ public class Potion : MonoBehaviour {
 	[SerializeField] private bool health;
 	[SerializeField] private bool stamina;
 	[SerializeField] private bool mana;
+	[SerializeField] private bool xp;
 	private GameObject player;
 
 	private void Awake () {
@@ -27,13 +28,19 @@ public class Potion : MonoBehaviour {
 		if(health)
 		{
 			player.GetComponent<PlayerStats>().health += value;
-
-		} else if(stamina) {
-			player.GetComponent<PlayerStats>().stamina += value;
-
-		} else if(mana) {
-			player.GetComponent<PlayerStats>().mana += value;
 		}
+			if(stamina) 
+			{
+				player.GetComponent<PlayerStats>().stamina += value;
+			}
+				if(mana) 
+				{
+					player.GetComponent<PlayerStats>().mana += value;
+				}
+					if(xp) 
+					{
+						player.GetComponent<PlayerExperience>().AddXp(value);
+					}
 
 		Destroy(this.gameObject);
 	}
