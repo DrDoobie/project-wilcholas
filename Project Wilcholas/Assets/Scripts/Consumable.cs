@@ -27,21 +27,32 @@ public class Consumable : MonoBehaviour {
 		//Dirt code here, must clean later
 		if(health)
 		{
-			player.GetComponent<PlayerStats>().health += value;
+			if(player.GetComponent<PlayerStats>().health < player.GetComponent<PlayerStats>().statLimit)
+			{
+				player.GetComponent<PlayerStats>().health += value;
+					Destroy(this.gameObject);
+			}
 		}
 			if(stamina) 
 			{
-				player.GetComponent<PlayerStats>().stamina += value;
+				if(player.GetComponent<PlayerStats>().stamina < player.GetComponent<PlayerStats>().statLimit)
+				{
+					player.GetComponent<PlayerStats>().stamina += value;
+						Destroy(this.gameObject);
+				}
 			}
 				if(mana) 
 				{
-					player.GetComponent<PlayerStats>().mana += value;
+					if(player.GetComponent<PlayerStats>().mana < player.GetComponent<PlayerStats>().statLimit)
+					{
+						player.GetComponent<PlayerStats>().mana += value;
+							Destroy(this.gameObject);
+					}	
 				}
 					if(xp) 
 					{
 						player.GetComponent<PlayerExperience>().AddXp(value);
+							Destroy(this.gameObject);
 					}
-
-		Destroy(this.gameObject);
 	}
 }
