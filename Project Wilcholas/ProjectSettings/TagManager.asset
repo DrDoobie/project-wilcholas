@@ -11,6 +11,7 @@ TagManager:
   - Enemy
   - LevelIndicator
   - TileSpawn
+  - TileTemplates
   layers:
   - Default
   - TransparentFX
