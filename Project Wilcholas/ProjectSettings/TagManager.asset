@@ -12,6 +12,7 @@ TagManager:
   - LevelIndicator
   - TileSpawn
   - TileTemplates
+  - CoinsIndicator
   layers:
   - Default
   - TransparentFX

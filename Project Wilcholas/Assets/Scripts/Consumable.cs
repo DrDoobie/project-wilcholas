@@ -10,6 +10,7 @@ public class Consumable : MonoBehaviour {
 	[SerializeField] private bool stamina;
 	[SerializeField] private bool mana;
 	[SerializeField] private bool xp;
+	[SerializeField] private bool coins;
 	private GameObject player;
 
 	private void Awake () {
@@ -54,5 +55,10 @@ public class Consumable : MonoBehaviour {
 						player.GetComponent<PlayerExperience>().AddXp(value);
 							Destroy(this.gameObject);
 					}
+						if(coins)
+						{
+							player.GetComponent<PlayerStats>().coins += (int)value;
+								Destroy(this.gameObject);
+						}
 	}
 }

@@ -7,6 +7,7 @@ public class PlayerStats : MonoBehaviour {
 
 	[HideInInspector] public bool isAlive;
 	public float health = 100.0f, stamina = 100.0f, mana = 100.0f, statLimit = 100.0f, regenSpeed = 0.05f;
+	public int coins;
 	private Slider healthBar, staminaBar, manaBar;
 	
 	private void Awake () {
@@ -58,6 +59,9 @@ public class PlayerStats : MonoBehaviour {
 		healthBar.value = health;
 			staminaBar.value = stamina;
 				manaBar.value = mana;
+
+		//Display coins
+		GameObject.FindWithTag("CoinsIndicator").GetComponent<Text>().text = "Coins: " + coins.ToString();
 
 		if(health <= 0)
 		{
