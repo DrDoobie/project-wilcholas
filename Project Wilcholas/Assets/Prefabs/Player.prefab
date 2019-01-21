@@ -229,6 +229,7 @@ MonoBehaviour:
   mana: 100
   statLimit: 100
   regenSpeed: 0.05
+  coins: 0
 --- !u!143 &143129992677474374
 CharacterController:
   m_ObjectHideFlags: 1
