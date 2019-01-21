@@ -26,15 +26,15 @@ public class TileSpawner : MonoBehaviour {
 
 			} else if(openDir == 2) {
 				val = Random.Range(0, templates.negZ.Length);
-					Instantiate(templates.posX[val], transform.position, Quaternion.identity);
+					Instantiate(templates.negZ[val], transform.position, Quaternion.identity);
 
 			} else if(openDir == 3) {
 				val = Random.Range(0, templates.negX.Length);
-					Instantiate(templates.posX[val], transform.position, Quaternion.identity);
+					Instantiate(templates.negX[val], transform.position, Quaternion.identity);
 
 			} else if(openDir == 4) {
 				val = Random.Range(0, templates.posZ.Length);
-					Instantiate(templates.posX[val], transform.position, Quaternion.identity);
+					Instantiate(templates.posZ[val], transform.position, Quaternion.identity);
 			}
 
 			spawned = true;

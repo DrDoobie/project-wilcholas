@@ -187,23 +187,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   posX:
-  - {fileID: 1256293237056510, guid: f139f64cc26defe42a1212d8f8bed42b, type: 2}
-  - {fileID: 1256293237056510, guid: f212b7cf943cc8947b7671bc96dbec38, type: 2}
   - {fileID: 1256293237056510, guid: f6b8f20128d001d439c3159fca9e7392, type: 2}
-  - {fileID: 1256293237056510, guid: ab9de8c77cc66674a999723d83726765, type: 2}
   negX:
-  - {fileID: 1256293237056510, guid: 3ac60516e940d41469c5b8775c7e650f, type: 2}
-  - {fileID: 1256293237056510, guid: f212b7cf943cc8947b7671bc96dbec38, type: 2}
   - {fileID: 1256293237056510, guid: 9c91f2e02f3ff32499a009f4b2e7a7e9, type: 2}
   posZ:
   - {fileID: 1256293237056510, guid: 47721677ce2ecdc468f556094f9ee262, type: 2}
-  - {fileID: 1256293237056510, guid: dc1a22bbdb8310c498202c5ee436fc3f, type: 2}
-  - {fileID: 1256293237056510, guid: f139f64cc26defe42a1212d8f8bed42b, type: 2}
   negZ:
   - {fileID: 1256293237056510, guid: a01146a79390a5b4faa27ce3c2c08e69, type: 2}
-  - {fileID: 1256293237056510, guid: dc1a22bbdb8310c498202c5ee436fc3f, type: 2}
-  - {fileID: 1256293237056510, guid: ab9de8c77cc66674a999723d83726765, type: 2}
-  - {fileID: 1256293237056510, guid: 3ac60516e940d41469c5b8775c7e650f, type: 2}
 --- !u!1 &393038614
 GameObject:
   m_ObjectHideFlags: 0
