@@ -11,7 +11,8 @@ public class SceneChange : MonoBehaviour {
 	{
 		if(other.tag == "Player")
 		{
-			SceneManager.LoadScene(scene);
+			GameObject.FindGameObjectWithTag("Player").transform.position = new Vector3(0, 0, 0);
+				SceneManager.LoadScene(scene);
 		}
 	}
 }
