@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour {
 
@@ -8,7 +9,12 @@ public class GameController : MonoBehaviour {
 	[HideInInspector] public int maxAI, currentAI;
 
 	private void Update () {
-		PauseController();
+        PauseController();
+
+        if(Input.GetKeyDown(KeyCode.R))
+        {
+            ResetScene();
+        }
 	}
 
 	private void PauseController () {
@@ -26,8 +32,11 @@ public class GameController : MonoBehaviour {
 		LockCursor();
     }
 
-    private static void LockCursor()
-    {
+    private void ResetScene () {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    private static void LockCursor () {
         Time.timeScale = 1.0f;
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
