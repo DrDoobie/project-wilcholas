@@ -118,6 +118,7 @@ MonoBehaviour:
   stamina: 1
   mana: 0
   xp: 0
+  coins: 0
 --- !u!135 &135470868358075652
 SphereCollider:
   m_ObjectHideFlags: 1
