@@ -38,13 +38,13 @@ GameObject:
   m_Component:
   - component: {fileID: 4774723306431448}
   - component: {fileID: 195981644637509802}
-  - component: {fileID: 114302532594496732}
   - component: {fileID: 135420431805593708}
+  - component: {fileID: 114302532594496732}
   - component: {fileID: 114450543681252622}
   m_Layer: 11
   m_Name: Bat_Enemy
   m_TagString: Enemy
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -549,7 +549,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0.000015258789, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
