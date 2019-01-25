@@ -11,10 +11,12 @@ public class Consumable : MonoBehaviour {
 	[SerializeField] private bool mana;
 	[SerializeField] private bool xp;
 	[SerializeField] private bool coins;
-	private GameObject player;
+	[SerializeField] private bool hallucinogen;
+	private GameObject player, gc;
 
 	private void Awake () {
 		player = GameObject.FindWithTag("Player");
+		gc = GameObject.FindWithTag("GameController");
 	}
 
 	private void OnTriggerEnter (Collider other) {
@@ -60,5 +62,9 @@ public class Consumable : MonoBehaviour {
 							player.GetComponent<PlayerStats>().coins += (int)value;
 								Destroy(this.gameObject);
 						}
+							if(hallucinogen)
+							{
+								gc.GetComponent<ProfileChanger>().Trip();
+							}
 	}
 }

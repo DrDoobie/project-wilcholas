@@ -9,6 +9,7 @@ TagManager:
   - ManaBar
   - Enemy
   - CoinsIndicator
+  - PostProcessVolume
   layers:
   - Default
   - TransparentFX
