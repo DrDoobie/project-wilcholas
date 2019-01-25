@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4588567238666408}
   - component: {fileID: 212690651177760076}
-  - component: {fileID: 114471725046137546}
+  - component: {fileID: 114531581963015072}
   m_Layer: 0
   m_Name: Graphics
   m_TagString: Untagged
@@ -70,7 +70,7 @@ Transform:
   m_Father: {fileID: 4416854854315730}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114471725046137546
+--- !u!114 &114531581963015072
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}

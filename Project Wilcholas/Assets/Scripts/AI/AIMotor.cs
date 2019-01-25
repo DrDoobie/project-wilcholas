@@ -5,49 +5,41 @@ using UnityEngine.AI;
 
 public class AIMotor : MonoBehaviour {
 
-	public bool wander, agro;
-	[SerializeField] private float wanderTimer = 6.0f, wanderRadius = 20.0f;
+	[HideInInspector] public bool agro = false;
+	[SerializeField] private float wanderTime = 3.0f, wanderRadius = 20.0f;
 	private NavMeshAgent agent;
-	private float timer;
+	private GameController gc;
 
 	private void Awake () {
-		agent = this.gameObject.GetComponent<NavMeshAgent>();
-				GameObject.FindWithTag("GameController").GetComponent<GameController>().currentAI++;
-					timer = wanderTimer;
+		agent = gameObject.GetComponent<NavMeshAgent>();
+		gc = GameObject.FindWithTag("GameController").GetComponent<GameController>();
+		gc.currentAI++;
+
+		StartCoroutine(Wander());
 	}
 
 	private void Update () {
-		if(wander)
+		if(agro)
 		{
-			WanderController();
-
-		} else if(agro) {
-			Agro();
+			agent.SetDestination(GameObject.FindWithTag("Player").transform.position);
 		}
 	}
 
-	private void WanderController () {
-		agro = false;
-			timer += Time.deltaTime;
- 
-        if (timer >= wanderTimer) {
-            Vector3 newPos = RandomNavSphere(transform.position, wanderRadius, -1);
-				agent.SetDestination(newPos);
-					timer = 0;
-        }
+	private IEnumerator Wander () {
+		while(!agro)
+		{
+			Vector3 newPos = RandomNavSphere(transform.position, wanderRadius, -1);
+			agent.SetDestination(newPos);
+
+			yield return new WaitForSeconds(wanderTime);
+		}
 	}
 
-	public void Agro () {
-		wander = false;
-			agro = true;
-				agent.SetDestination(GameObject.FindWithTag("Player").transform.position);
-	}
-
-	public static Vector3 RandomNavSphere(Vector3 origin, float radius, int layermask) {
+	public static Vector3 RandomNavSphere (Vector3 origin, float radius, int layermask) {
         Vector3 randDirection = Random.insideUnitSphere * radius;
-			randDirection += origin;
-				NavMeshHit navHit;
-					NavMesh.SamplePosition (randDirection, out navHit, radius, layermask);
-						return navHit.position;
+		randDirection += origin;
+		NavMeshHit navHit;
+		NavMesh.SamplePosition (randDirection, out navHit, radius, layermask);
+		return navHit.position;
     }
 }

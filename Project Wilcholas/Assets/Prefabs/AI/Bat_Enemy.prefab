@@ -73,7 +73,7 @@ GameObject:
   - component: {fileID: 224268018946771828}
   - component: {fileID: 114434776011993536}
   m_Layer: 11
-  m_Name: Health
+  m_Name: Health.slider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -247,9 +247,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2e3d3b90903a434f840ed28449a4d40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wander: 1
   agro: 0
-  wanderTimer: 6
+  wanderTime: 3
   wanderRadius: 20
 --- !u!114 &114315889924717212
 MonoBehaviour:
@@ -350,7 +349,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ai: 1
   health: 100
-  maxHealth: 100
   value: 5
   healthBar: {fileID: 114434776011993536}
 --- !u!114 &114740216344164110

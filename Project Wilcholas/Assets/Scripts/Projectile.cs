@@ -30,7 +30,7 @@ public class Projectile : MonoBehaviour {
 		if(col.gameObject.tag == "Enemy")
 		{
 			col.gameObject.GetComponent<HealthController>().SubtractHealth(damage);
-				col.gameObject.GetComponent<AIMotor>().Agro();
+				col.gameObject.GetComponent<AIMotor>().agro = true;
 					Instantiate(impactEffect, transform.position, transform.rotation);
 						DamagePopup();
 							Destroy(this.gameObject);

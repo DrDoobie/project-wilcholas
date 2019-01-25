@@ -9,12 +9,11 @@ public class Billboard : MonoBehaviour
         mainCam = Camera.main;
     }
 
-    //Orient the camera after all movement is completed this frame to avoid jittering
     void LateUpdate()
     {
         transform.LookAt(transform.position + mainCam.transform.rotation * Vector3.forward,
-            mainCam.transform.rotation * Vector3.up);
+        mainCam.transform.rotation * Vector3.up);
     }
-
+    
 	//Code by Neil Carter
 }

@@ -5,7 +5,7 @@ using UnityEngine;
 public class GameController : MonoBehaviour {
 
 	[HideInInspector] public bool isPaused;
-	public int maxAI, currentAI;
+	[HideInInspector] public int maxAI, currentAI;
 
 	private void Update () {
 		PauseController();
@@ -18,22 +18,25 @@ public class GameController : MonoBehaviour {
 		}
 
 		if(isPaused)
-		{
-			//Freeze time
-			Time.timeScale = 0.0f;
+        {
+            FreeCursor();
+			return;
+        }
 
-			//Adjust cursor
-			Cursor.lockState = CursorLockMode.None;
-				Cursor.visible = true;
+		LockCursor();
+    }
 
-		} else {
-			//Continue time
-			Time.timeScale = 1.0f;
+    private static void LockCursor()
+    {
+        Time.timeScale = 1.0f;
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+    }
 
-			//Adjust cursor
-			Cursor.lockState = CursorLockMode.Locked;
-				Cursor.visible = false;
-		}
-	}
+    public void FreeCursor () {
+        Time.timeScale = 0.0f;
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+    }
 }
 
