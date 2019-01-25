@@ -2615,7 +2615,7 @@ Light:
   m_SpotAngle: 30
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 1
+    m_Type: 0
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -3257,6 +3257,21 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4485995993864590, guid: eacc82b7478e2f5449ac2a91db96c507, type: 2}
       propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 20098582510577084, guid: eacc82b7478e2f5449ac2a91db96c507,
+        type: 2}
+      propertyPath: m_BackGroundColor.r
+      value: 0.3066038
+      objectReference: {fileID: 0}
+    - target: {fileID: 20098582510577084, guid: eacc82b7478e2f5449ac2a91db96c507,
+        type: 2}
+      propertyPath: m_BackGroundColor.g
+      value: 0.5666274
+      objectReference: {fileID: 0}
+    - target: {fileID: 20098582510577084, guid: eacc82b7478e2f5449ac2a91db96c507,
+        type: 2}
+      propertyPath: m_BackGroundColor.b
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
