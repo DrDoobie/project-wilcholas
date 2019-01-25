@@ -102,7 +102,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d830520cf3ff044d8e858ecf610ff09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: 25
+  value: 50
   health: 0
   stamina: 0
   mana: 1

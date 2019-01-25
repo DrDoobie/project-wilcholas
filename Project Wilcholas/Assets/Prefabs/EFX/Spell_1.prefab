@@ -99,7 +99,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8424bdcd61ad4134b8e6bc499e1fb590, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  impactEffect: {fileID: 1649281749367428, guid: f10d126207df7ca499188784681de119,
+  impactEffect: {fileID: 1083511230053142, guid: f10d126207df7ca499188784681de119,
     type: 2}
   dmgPopup: {fileID: 1324299359626504, guid: ffd006e4c26ae644ba7b9238133143ad, type: 2}
   minDamg: 12

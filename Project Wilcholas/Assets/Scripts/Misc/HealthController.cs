@@ -9,12 +9,15 @@ public class HealthController : MonoBehaviour {
 	[SerializeField] private float health = 100.0f, value = 1.0f;
 	[SerializeField] private Slider healthBar;
 
+	private void Awake () {
+		healthBar.maxValue = health;
+	}
+
 	private void Update () {
 		Controller();
 	}
 
 	private void Controller () {
-		healthBar.maxValue = health;
 		healthBar.value = health;
 
 		if(health <= 0)

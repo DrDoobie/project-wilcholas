@@ -87,7 +87,7 @@ MonoBehaviour:
   health: 1
   stamina: 0
   mana: 0
-  xp: 1
+  xp: 0
   coins: 0
 --- !u!114 &114905306695104094
 MonoBehaviour:

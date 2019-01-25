@@ -53,4 +53,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   aiSpawner: 1
   obj: {fileID: 1257307913293794, guid: 8568c2fcc98db9b4e8c761152fca1051, type: 2}
-  spawnTimer: 6
+  spawnTimer: 15

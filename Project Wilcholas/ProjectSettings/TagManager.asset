@@ -7,11 +7,7 @@ TagManager:
   - HealthBar
   - StaminaBar
   - ManaBar
-  - ExperienceBar
   - Enemy
-  - LevelIndicator
-  - TileSpawn
-  - TileTemplates
   - CoinsIndicator
   layers:
   - Default

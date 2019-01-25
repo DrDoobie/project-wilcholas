@@ -12,7 +12,7 @@ public class Projectile : MonoBehaviour {
 
 	void Start () {
 		SelfDestruct(selfDestructTime);
-			damage = Random.Range(minDamg, maxDamg);
+		damage = Random.Range(minDamg, maxDamg);
 	}
 
 	private void SelfDestruct (float value) {
@@ -21,8 +21,8 @@ public class Projectile : MonoBehaviour {
 
 	private void DamagePopup () {
 		GameObject go = Instantiate(dmgPopup, transform.position, transform.rotation);
-			go.transform.GetChild(0).GetComponent<Text>().text = "-" + ((int)damage).ToString();
-				Destroy(go, 0.75f);
+		go.transform.GetChild(0).GetComponent<Text>().text = "-" + ((int)damage).ToString();
+		Destroy(go, 0.75f);
 	}
 
 	private void OnCollisionEnter (Collision col) {
@@ -30,14 +30,11 @@ public class Projectile : MonoBehaviour {
 		if(col.gameObject.tag == "Enemy")
 		{
 			col.gameObject.GetComponent<HealthController>().SubtractHealth(damage);
-				col.gameObject.GetComponent<AIMotor>().agro = true;
-					Instantiate(impactEffect, transform.position, transform.rotation);
-						DamagePopup();
-							Destroy(this.gameObject);
+			col.gameObject.GetComponent<AIMotor>().agro = true;
+			DamagePopup();
+		} 
 
-		} else {
-			Instantiate(impactEffect, transform.position, transform.rotation);
-				Destroy(this.gameObject);
-		}
+		Instantiate(impactEffect, transform.position, transform.rotation);
+		Destroy(this.gameObject);
 	}
 }

@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class NotificationSystem : MonoBehaviour {
 
 	[SerializeField] private Text notificationsText;
-	[SerializeField] private float displayTime;
+	[SerializeField] private float displayTime = 2.5f;
 
 	public void Notify (string text) {
 		StartCoroutine(Notification(text));
