@@ -10,11 +10,6 @@ public class GameController : MonoBehaviour {
 
 	private void Update () {
         PauseController();
-
-        if(Input.GetKeyDown(KeyCode.R))
-        {
-            ResetScene();
-        }
 	}
 
 	private void PauseController () {
@@ -30,10 +25,6 @@ public class GameController : MonoBehaviour {
         }
 
 		LockCursor();
-    }
-
-    private void ResetScene () {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     private static void LockCursor () {
