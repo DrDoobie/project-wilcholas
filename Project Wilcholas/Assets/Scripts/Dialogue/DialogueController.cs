@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class DialogueController : MonoBehaviour {
 
 	[SerializeField] private GameObject dialogueBox;
-	[SerializeField] private Text nameText, dialogueText;
+	public Text nameText, dialogueText;
 	private bool inDialogue;
 	private Queue<string> sentences;
 
@@ -51,11 +51,22 @@ public class DialogueController : MonoBehaviour {
 		}
 		
 		string sentence = sentences.Dequeue();
-		dialogueText.text = sentence;
+		StopAllCoroutines();
+		StartCoroutine(TypeSentence(sentence));
 	}
 
 	private void EndDialogue () {
 		inDialogue = false;
 		FindObjectOfType<GameController>().isPaused = false;
+	}
+
+	private IEnumerator TypeSentence (string sentence) {
+		dialogueText.text = "";
+
+		foreach(char letter in sentence.ToCharArray())
+		{
+			dialogueText.text += letter;
+			yield return null;
+		}
 	}
 }
