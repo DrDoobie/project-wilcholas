@@ -348,9 +348,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ai: 1
-  health: 100
-  value: 5
+  dropsLoot: 1
   healthBar: {fileID: 114434776011993536}
+  health: 2
+  value: 5
+  lootDrops:
+  - {fileID: 1988244236876444, guid: 4c8c19c40565e0244a377cc1777c73ca, type: 2}
+  - {fileID: 1329534888148034, guid: 98a0add3c4389884dafe679dad7ee97a, type: 2}
+  - {fileID: 1797626175247160, guid: 586b249ddc1e91a44b5f8aeb346c34d9, type: 2}
+  - {fileID: 1322592481674140, guid: ec3524bb6fafbb841a236e9b65b92d9a, type: 2}
 --- !u!114 &114740216344164110
 MonoBehaviour:
   m_ObjectHideFlags: 1
