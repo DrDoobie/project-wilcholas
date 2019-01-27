@@ -86,6 +86,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10a260abfbfcf204595cc499f7dfb7c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dialogue:
+    name: Shadoop
+    sentences:
+    - 'It''s dangerous to go alone!
+
+      Take this.'
+    - 'I hope you''ll find it useful in your
+
+      adventures.'
 --- !u!114 &114151911401121634
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -97,6 +106,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80849695002550e43b20ebd81bfff4a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inRange: 0
+  interacted: 0
+  myEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 114107983046300686}
+        m_MethodName: TriggerDialogue
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!114 &114247844614392088
 MonoBehaviour:
   m_ObjectHideFlags: 1

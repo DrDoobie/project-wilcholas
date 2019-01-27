@@ -5,7 +5,7 @@ using UnityEngine.Events;
 
 public class Interactable : MonoBehaviour {
 
-	private bool inRange, interacted;
+	public bool inRange, interacted;
 	private GameObject gameController;
 	public UnityEvent myEvent;
 
@@ -14,10 +14,20 @@ public class Interactable : MonoBehaviour {
 	}
 
 	private void Update () {
-		if((inRange) && (Input.GetButtonDown("Interact")) && (!interacted))
+		if((inRange) && (!interacted))
 		{
-			interacted = true;
-			myEvent.Invoke();
+			gameController.GetComponent<NotificationSystem>().DisplayText("'e'");
+		
+			if(Input.GetButtonDown("Interact"))
+			{
+				interacted = true;
+				myEvent.Invoke();
+			}
+		}
+
+		if(interacted)
+		{
+			gameController.GetComponent<NotificationSystem>().DisplayText("");
 		}
 	}
 
@@ -25,7 +35,6 @@ public class Interactable : MonoBehaviour {
 		if(other.tag == "Player")
 		{
 			inRange = true;
-			gameController.GetComponent<NotificationSystem>().DisplayText("'e'");
 		}
 	}
 
