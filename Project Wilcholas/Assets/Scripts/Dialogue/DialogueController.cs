@@ -17,13 +17,14 @@ public class DialogueController : MonoBehaviour {
 	private void Update () {
 		if((inDialogue))
 		{
+			FindObjectOfType<GameController>().isPaused = true;
 			dialogueBox.SetActive(true);
 
 			if(Input.GetButtonDown("Interact"))
 			{
 				DisplayNextSentence();
 			}
-			
+
 		} else {
 			dialogueBox.SetActive(false);
 		}
@@ -55,5 +56,6 @@ public class DialogueController : MonoBehaviour {
 
 	private void EndDialogue () {
 		inDialogue = false;
+		FindObjectOfType<GameController>().isPaused = false;
 	}
 }
