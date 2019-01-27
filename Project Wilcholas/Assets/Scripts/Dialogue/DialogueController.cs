@@ -1,9 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class DialogueController : MonoBehaviour {
 
+	[SerializeField] private GameObject dialogueBox;
+	[SerializeField] private Text nameText, dialogueText;
 	private bool inDialogue;
 	private Queue<string> sentences;
 
@@ -12,15 +15,23 @@ public class DialogueController : MonoBehaviour {
 	}
 
 	private void Update () {
-		if((inDialogue) && (Input.GetButtonDown("Interact")))
+		if((inDialogue))
 		{
-			DisplayNextSentence();
+			dialogueBox.SetActive(true);
+
+			if(Input.GetButtonDown("Interact"))
+			{
+				DisplayNextSentence();
+			}
+			
+		} else {
+			dialogueBox.SetActive(false);
 		}
 	}
 
 	public void StartDialogue (Dialogue dialogue) {
 		inDialogue = true;
-		Debug.Log("Starting conversation with " + dialogue.name);
+		nameText.text = dialogue.name;
 		sentences.Clear();
 		
 		foreach(string sentence in dialogue.sentences)
@@ -39,11 +50,10 @@ public class DialogueController : MonoBehaviour {
 		}
 		
 		string sentence = sentences.Dequeue();
-		Debug.Log(sentence);
+		dialogueText.text = sentence;
 	}
 
 	private void EndDialogue () {
 		inDialogue = false;
-		Debug.Log("Conversation over");
 	}
 }
