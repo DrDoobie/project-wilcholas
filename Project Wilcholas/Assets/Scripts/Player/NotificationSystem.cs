@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class NotificationSystem : MonoBehaviour {
 
+	private bool isNotifying;
 	[SerializeField] private Text notificationsText;
 	[SerializeField] private float displayTime = 2.5f;
 
@@ -12,11 +13,20 @@ public class NotificationSystem : MonoBehaviour {
 		StartCoroutine(Notification(text));
 	}
 
+	public void DisplayText (string text) {
+		if(!isNotifying)
+		{
+			notificationsText.text = text;
+		}
+	}
+
 	private IEnumerator Notification (string text) {
+		isNotifying = true;
 		notificationsText.text = "You learned " + text + "!";
 
 		yield return new WaitForSeconds(displayTime);
 
+		isNotifying = false;
 		notificationsText.text = "";
 	}
 }

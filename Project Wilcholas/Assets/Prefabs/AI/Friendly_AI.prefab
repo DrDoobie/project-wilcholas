@@ -19,7 +19,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4603142072824012}
+  - component: {fileID: 135690503971221438}
   - component: {fileID: 195189904025885506}
+  - component: {fileID: 114151911401121634}
   - component: {fileID: 114247844614392088}
   m_Layer: 0
   m_Name: Friendly_AI
@@ -72,6 +74,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114151911401121634
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1344270326267930}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80849695002550e43b20ebd81bfff4a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114247844614392088
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -97,6 +110,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9651f1b54a1906b44923ec35ab41fb3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!135 &135690503971221438
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1344270326267930}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 2
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!195 &195189904025885506
 NavMeshAgent:
   m_ObjectHideFlags: 1
