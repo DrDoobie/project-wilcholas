@@ -350,7 +350,7 @@ MonoBehaviour:
   ai: 1
   dropsLoot: 1
   healthBar: {fileID: 114434776011993536}
-  health: 2
+  health: 50
   value: 5
   lootDrops:
   - {fileID: 1988244236876444, guid: 4c8c19c40565e0244a377cc1777c73ca, type: 2}

@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class HealthController : MonoBehaviour {
 
-	[SerializeField] private bool ai, dropsLoot;
+	[SerializeField] private bool ai = false, dropsLoot = false;
 	[SerializeField] private Slider healthBar;
 	[SerializeField] private float health = 100.0f, value = 1.0f;
 	[SerializeField] private GameObject[] lootDrops;
