@@ -21,8 +21,9 @@ GameObject:
   - component: {fileID: 4603142072824012}
   - component: {fileID: 135690503971221438}
   - component: {fileID: 195189904025885506}
-  - component: {fileID: 114151911401121634}
   - component: {fileID: 114247844614392088}
+  - component: {fileID: 114151911401121634}
+  - component: {fileID: 114107983046300686}
   m_Layer: 0
   m_Name: Friendly_AI
   m_TagString: Untagged
@@ -74,6 +75,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114107983046300686
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1344270326267930}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10a260abfbfcf204595cc499f7dfb7c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114151911401121634
 MonoBehaviour:
   m_ObjectHideFlags: 1
