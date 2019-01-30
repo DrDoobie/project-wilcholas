@@ -3227,7 +3227,7 @@ Prefab:
     - target: {fileID: 114107983046300686, guid: 767398b81a46e9d4eb276fcd2fc3dfe4,
         type: 2}
       propertyPath: dialogue.sentences.Array.data[0]
-      value: 
+      value: Test
       objectReference: {fileID: 0}
     - target: {fileID: 114107983046300686, guid: 767398b81a46e9d4eb276fcd2fc3dfe4,
         type: 2}
