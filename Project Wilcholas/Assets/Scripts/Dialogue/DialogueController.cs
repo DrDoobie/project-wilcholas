@@ -20,7 +20,7 @@ public class DialogueController : MonoBehaviour {
 			FindObjectOfType<GameController>().isPaused = true;
 			dialogueBox.SetActive(true);
 
-			if(Input.GetButtonDown("Interact"))
+			if(Input.GetMouseButtonDown(0))
 			{
 				DisplayNextSentence();
 			}

@@ -89,12 +89,8 @@ MonoBehaviour:
   dialogue:
     name: Shadoop
     sentences:
-    - 'It''s dangerous to go alone!
-
-      Take this.'
-    - 'I hope you''ll find it useful in your
-
-      adventures.'
+    - I fuck yo bitch
+    - and I fuck yo mama
 --- !u!114 &114151911401121634
 MonoBehaviour:
   m_ObjectHideFlags: 1
