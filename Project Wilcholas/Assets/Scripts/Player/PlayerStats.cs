@@ -8,27 +8,11 @@ public class PlayerStats : MonoBehaviour {
 
 	public float health = 100.0f, stamina = 100.0f, mana = 100.0f, statLimit = 100.0f, regenSpeed = 0.05f;
 	public int coins;
-	private Slider healthBar, staminaBar, manaBar;
+	public Slider healthBar, staminaBar, manaBar;
 	
-	private void Awake () {
-		healthBar = GameObject.FindWithTag("HealthBar").GetComponent<Slider>();
-		staminaBar = GameObject.FindWithTag("StaminaBar").GetComponent<Slider>();
-		manaBar = GameObject.FindWithTag("ManaBar").GetComponent<Slider>();
-	}
-
 	private void Update () {
 		StatController();
 		StatClamp();
-
-		if(Input.GetKeyDown(KeyCode.S))
-		{
-			SaveData();
-		}
-
-		if(Input.GetKeyDown(KeyCode.L))
-		{
-			LoadData();
-		}
 	}
 
 	private void StatController () {
@@ -66,22 +50,5 @@ public class PlayerStats : MonoBehaviour {
 
 	private void Die () {
 		SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-	}
-
-	//--------------------------------------------------------------------------
-	public void SaveData () {
-		DataHandler.SaveData(this);
-		Debug.Log("Saved");
-	}
-
-	public void LoadData () {
-		SavedData savedData = DataHandler.LoadData();
-
-		health = savedData.health;
-		stamina = savedData.stamina;
-		mana = savedData.mana;
-		statLimit = savedData.statLimit;
-		coins = savedData.coins;
-		Debug.Log("Loaded");
 	}
 }

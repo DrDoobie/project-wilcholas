@@ -9,7 +9,7 @@ public class PlayerExperience : MonoBehaviour {
 	[SerializeField] private Text levelIndicator;
 	private PlayerStats playerStats;
 	[SerializeField] private float multiplier = 1.25f;
-	private float xpLevel = 1.0f, requiredXp = 10.0f, currentXp = 0.0f;
+	[HideInInspector] public float xpLevel = 1.0f, requiredXp = 10.0f, currentXp = 0.0f;
 
 	private void Awake () {
 		playerStats = GetComponent<PlayerStats>();
