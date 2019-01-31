@@ -19,6 +19,16 @@ public class PlayerStats : MonoBehaviour {
 	private void Update () {
 		StatController();
 		StatClamp();
+
+		if(Input.GetKeyDown(KeyCode.S))
+		{
+			SaveData();
+		}
+
+		if(Input.GetKeyDown(KeyCode.L))
+		{
+			LoadData();
+		}
 	}
 
 	private void StatController () {
@@ -56,5 +66,22 @@ public class PlayerStats : MonoBehaviour {
 
 	private void Die () {
 		SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+	}
+
+	//--------------------------------------------------------------------------
+	public void SaveData () {
+		DataHandler.SaveData(this);
+		Debug.Log("Saved");
+	}
+
+	public void LoadData () {
+		SavedData savedData = DataHandler.LoadData();
+
+		health = savedData.health;
+		stamina = savedData.stamina;
+		mana = savedData.mana;
+		statLimit = savedData.statLimit;
+		coins = savedData.coins;
+		Debug.Log("Loaded");
 	}
 }
