@@ -241,7 +241,7 @@ GameObject:
   m_Layer: 0
   m_Name: Mushroom_2
   m_TagString: Untagged
-  m_Icon: {fileID: -5487077368411116049, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -1393,8 +1393,8 @@ MonoBehaviour:
   regenSpeed: 0.05
   coins: 0
   healthBar: {fileID: 1821846660}
-  staminaBar: {fileID: 1387522535}
-  manaBar: {fileID: 625099111}
+  staminaBar: {fileID: 625099111}
+  manaBar: {fileID: 1387522535}
 --- !u!114 &372323494
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1913,7 +1913,7 @@ GameObject:
   m_Layer: 0
   m_Name: Scroll_1
   m_TagString: Untagged
-  m_Icon: {fileID: -5487077368411116049, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -6025,7 +6025,7 @@ GameObject:
   m_Layer: 0
   m_Name: Enemy_Spawner
   m_TagString: Untagged
-  m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
