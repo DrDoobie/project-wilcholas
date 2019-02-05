@@ -852,28 +852,19 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 23809398727671618, guid: c971ae84c149fb5418da62f3879cbb8a,
+    - target: {fileID: 224948703742208506, guid: c971ae84c149fb5418da62f3879cbb8a,
         type: 2}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: ac1d8e6c24d66bf4295fbf400f96e11f, type: 2}
-    - target: {fileID: 23809398727671618, guid: c971ae84c149fb5418da62f3879cbb8a,
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224948703742208506, guid: c971ae84c149fb5418da62f3879cbb8a,
         type: 2}
-      propertyPath: m_Materials.Array.data[1]
-      value: 
-      objectReference: {fileID: 2100000, guid: ac1d8e6c24d66bf4295fbf400f96e11f, type: 2}
-    - target: {fileID: 1118615031290320, guid: c971ae84c149fb5418da62f3879cbb8a, type: 2}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967295
+      propertyPath: m_AnchorMax.y
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c971ae84c149fb5418da62f3879cbb8a, type: 2}
   m_IsPrefabAsset: 0
---- !u!4 &474944905 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4918244220857184, guid: c971ae84c149fb5418da62f3879cbb8a,
-    type: 2}
-  m_PrefabInternal: {fileID: 474944904}
 --- !u!1 &567789069
 GameObject:
   m_ObjectHideFlags: 0
@@ -1185,25 +1176,6 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 754945449}
   m_CullTransparentMesh: 0
---- !u!1 &821754202 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1118615031290320, guid: c971ae84c149fb5418da62f3879cbb8a,
-    type: 2}
-  m_PrefabInternal: {fileID: 474944904}
---- !u!64 &821754203
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 821754202}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_SkinWidth: 0.01
-  m_Mesh: {fileID: 4300002, guid: 14a601cdcace50146bac90a28e80f40a, type: 3}
 --- !u!1 &828509163
 GameObject:
   m_ObjectHideFlags: 0
@@ -1292,53 +1264,6 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.Slider+SliderEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
---- !u!1001 &855439026
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 474944905}
-    m_Modifications:
-    - target: {fileID: 4972395891306758, guid: f95373d17ff92264f9c5dfd23e4e6cd6, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: -20
-      objectReference: {fileID: 0}
-    - target: {fileID: 4972395891306758, guid: f95373d17ff92264f9c5dfd23e4e6cd6, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4972395891306758, guid: f95373d17ff92264f9c5dfd23e4e6cd6, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4972395891306758, guid: f95373d17ff92264f9c5dfd23e4e6cd6, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4972395891306758, guid: f95373d17ff92264f9c5dfd23e4e6cd6, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4972395891306758, guid: f95373d17ff92264f9c5dfd23e4e6cd6, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4972395891306758, guid: f95373d17ff92264f9c5dfd23e4e6cd6, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4972395891306758, guid: f95373d17ff92264f9c5dfd23e4e6cd6, type: 2}
-      propertyPath: m_RootOrder
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 114833761953525612, guid: f95373d17ff92264f9c5dfd23e4e6cd6,
-        type: 2}
-      propertyPath: scene
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: f95373d17ff92264f9c5dfd23e4e6cd6, type: 2}
-  m_IsPrefabAsset: 0
 --- !u!1 &890343116
 GameObject:
   m_ObjectHideFlags: 0
