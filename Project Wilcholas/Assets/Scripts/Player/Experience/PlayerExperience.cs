@@ -13,6 +13,7 @@ public class PlayerExperience : MonoBehaviour {
 	[Header("Skill Tree")] public GameObject window;
 	public Text skillPointsText;
 	public int skillPoints;
+	private bool skillTreeOpen;
 
 
 	private void Awake () {
@@ -20,6 +21,11 @@ public class PlayerExperience : MonoBehaviour {
 	}
 
 	private void Update () {
+		if(Input.GetButtonDown("Skill Tree"))
+		{
+			skillTreeOpen = !skillTreeOpen;
+		}
+
 		LevelController();
 		UIController();
 	}
@@ -42,7 +48,7 @@ public class PlayerExperience : MonoBehaviour {
 		xpBar.maxValue = requiredXp;
 		xpBar.value = currentXp;
 
-		if(FindObjectOfType<GameController>().isPaused)
+		if(skillTreeOpen)
 		{
 			window.SetActive(true);
 			skillPointsText.text = "Skill Points: " + skillPoints;

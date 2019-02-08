@@ -15,7 +15,7 @@ MonoBehaviour:
   function:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114217163266416994, guid: c7d4926351fa1ef4295d3b010b27c9e2,
+      - m_Target: {fileID: 114427376613762438, guid: 0519a53c4b10f134b8e7489b10575244,
           type: 2}
         m_MethodName: UpgradeStats
         m_Mode: 4

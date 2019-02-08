@@ -22,11 +22,11 @@ public class Consumable : MonoBehaviour {
 	private void OnTriggerEnter (Collider other) {
 		if(other.tag == "Player")
 		{
-			UsePotion();
+			Consume();
 		}
 	}
 
-	private void UsePotion () {
+	private void Consume () {
 		//Dirt code here, must clean later
 		if(health)
 		{

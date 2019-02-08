@@ -7,7 +7,7 @@ public class DialogueController : MonoBehaviour {
 
 	[SerializeField] private GameObject dialogueBox;
 	public Text nameText, dialogueText;
-	private bool inDialogue;
+	[HideInInspector] public bool inDialogue;
 	private Queue<string> sentences;
 
 	private void Start () {
