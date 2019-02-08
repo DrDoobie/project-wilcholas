@@ -32,7 +32,7 @@ public class PlayerSpells : MonoBehaviour {
     }
 
 	private void CastSpell () {
-		if(player.mana > spellEquipped.cost)
+		if((player.mana > spellEquipped.cost) && (!FindObjectOfType<GameController>().isPaused))
 		{
 			GameObject go = Instantiate(spellEquipped.gfx, (transform.position + Camera.main.transform.forward), (transform.rotation));
 			go.GetComponent<Rigidbody>().AddForce((transform.forward * spellEquipped.force) * 100.0f);

@@ -11,6 +11,7 @@ public class PlayerExperience : MonoBehaviour {
 	[SerializeField] private float multiplier = 1.25f;
 	[HideInInspector] public float xpLevel = 1.0f, requiredXp = 10.0f, currentXp = 0.0f;
 	[Header("Skill Tree")] public GameObject window;
+	public Text skillPointsText;
 	public int skillPoints;
 
 
@@ -40,6 +41,15 @@ public class PlayerExperience : MonoBehaviour {
 		levelIndicator.text = xpLevel.ToString();
 		xpBar.maxValue = requiredXp;
 		xpBar.value = currentXp;
+
+		if(FindObjectOfType<GameController>().isPaused)
+		{
+			window.SetActive(true);
+			skillPointsText.text = "Skill Points: " + skillPoints;
+			return;
+		}
+
+		window.SetActive(false);
 	}
 
 	private void LevelUp ()
