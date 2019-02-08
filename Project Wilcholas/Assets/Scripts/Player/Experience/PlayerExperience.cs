@@ -11,6 +11,7 @@ public class PlayerExperience : MonoBehaviour {
 	[SerializeField] private float multiplier = 1.25f;
 	[HideInInspector] public float xpLevel = 1.0f, requiredXp = 10.0f, currentXp = 0.0f;
 	[Header("Skill Tree")] public GameObject window;
+	public int skillPoints;
 
 
 	private void Awake () {
@@ -44,13 +45,13 @@ public class PlayerExperience : MonoBehaviour {
 	private void LevelUp ()
     {
         xpLevel++;
+		skillPoints++;
         currentXp = 0.0f;
         requiredXp *= multiplier;
-        ModifyStats();
+        FillStats();
     }
 
-    private void ModifyStats () {
-        playerStats.statLimit *= multiplier;
+    private void FillStats () {
         playerStats.health = playerStats.statLimit;
         playerStats.stamina = playerStats.statLimit;
         playerStats.mana = playerStats.statLimit;
