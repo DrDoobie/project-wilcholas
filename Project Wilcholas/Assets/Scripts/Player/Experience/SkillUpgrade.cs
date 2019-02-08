@@ -7,11 +7,14 @@ public class SkillUpgrade : MonoBehaviour {
 
 	[SerializeField] private bool isLocked;
 	private bool isPurchased = false;
-	public GameObject lockImg, nextLevel;
+	public GameObject lockImg, nextSkill;
+	public Skill skill;
+	public Text text;
 	private int skillPoints;
 
 	private void Update ()
     {
+		text.text = skill.skillDescription;
         Controller();
     }
 
@@ -39,10 +42,11 @@ public class SkillUpgrade : MonoBehaviour {
 			return;
 		}
 
+		skill.function.Invoke();
 		FindObjectOfType<PlayerExperience>().skillPoints--;
 		isPurchased = true;
 
-		if(nextLevel != null)
-			nextLevel.GetComponent<SkillUpgrade>().isLocked = false;
+		if(nextSkill != null)
+			nextSkill.GetComponent<SkillUpgrade>().isLocked = false;
 	}
 }
