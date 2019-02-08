@@ -10,6 +10,8 @@ public class PlayerExperience : MonoBehaviour {
 	private PlayerStats playerStats;
 	[SerializeField] private float multiplier = 1.25f;
 	[HideInInspector] public float xpLevel = 1.0f, requiredXp = 10.0f, currentXp = 0.0f;
+	[Header("Skill Tree")] public GameObject window;
+
 
 	private void Awake () {
 		playerStats = GetComponent<PlayerStats>();
