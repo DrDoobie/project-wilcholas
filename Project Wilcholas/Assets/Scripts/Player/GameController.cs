@@ -7,6 +7,7 @@ public class GameController : MonoBehaviour {
 
 	[HideInInspector] public bool isPaused;
 	[HideInInspector] public int maxAI, currentAI;
+    public Color color;
 
 	private void Update () {
         PauseController();
@@ -26,6 +27,13 @@ public class GameController : MonoBehaviour {
 
 		LockCursor();
     }
+
+    private void SpriteBrightness () {
+		foreach (var renderer in FindObjectsOfType<SpriteRenderer>())
+		{
+			renderer.color = color;
+		}
+	}
 
     private static void LockCursor () {
         Time.timeScale = 1.0f;
