@@ -7,6 +7,6 @@ using UnityEngine.Events;
 public class Spell : ScriptableObject {
 
     public string spellName;
-    public float cost, value;
+    public float cost;
     public UnityEvent function;
 }

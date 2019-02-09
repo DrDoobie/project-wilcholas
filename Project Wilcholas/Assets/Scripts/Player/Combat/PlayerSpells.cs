@@ -4,14 +4,9 @@ using UnityEngine;
 
 public class PlayerSpells : MonoBehaviour {
 
-	public Spell spellEquipped;
-	public List<Spell> spells;
-	private PlayerStats player;
-	private int currentSpell;
-
-	private void Awake () {
-		player = GetComponent<PlayerStats>();
-	}
+	public Component spellEquipped;
+	public List<Component> spells;
+	public int currentSpell;
 
 	private void Update () {
 		SpellController();
@@ -32,11 +27,7 @@ public class PlayerSpells : MonoBehaviour {
     }
 
 	private void CastSpell () {
-		if((player.mana > spellEquipped.cost) && (!FindObjectOfType<GameController>().isPaused))
-		{
-			spellEquipped.function.Invoke();
-			player.mana -= spellEquipped.cost;
-		}
+		Debug.Log("woosh");
 	}
 
 	private void ScrollController () {

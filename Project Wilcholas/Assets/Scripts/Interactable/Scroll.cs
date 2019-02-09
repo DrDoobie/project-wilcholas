@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Scroll : MonoBehaviour {
 
-	[SerializeField] private Spell spell;
+	[SerializeField] private Component spell;
 	private GameObject player;
 
 	private void Awake () {
@@ -20,7 +20,7 @@ public class Scroll : MonoBehaviour {
 
 	private void LearnScroll () {
 		player.GetComponent<PlayerSpells>().spells.Add(spell);
-			GameObject.FindWithTag("GameController").GetComponent<NotificationSystem>().Notify(spell.spellName);
+			GameObject.FindWithTag("GameController").GetComponent<NotificationSystem>().Notify("You learned an uknown spell!");
 				Destroy(this.gameObject);
 	}
 }

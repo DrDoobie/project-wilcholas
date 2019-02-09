@@ -7,4 +7,8 @@ public class UpgradeFunctions : MonoBehaviour {
 	public void UpgradeStats (float percent) {
 		FindObjectOfType<PlayerStats>().statLimit *= percent;
 	}
+
+	public void UpgradeRegenSpeed (float percent) {
+		FindObjectOfType<PlayerStats>().regenSpeed *= percent;
+	}
 }
