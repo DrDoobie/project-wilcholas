@@ -4,52 +4,57 @@ using UnityEngine;
 
 public class PlayerSpells : MonoBehaviour {
 
-	public GameObject spellEquipped;
-	public List<GameObject> spells;
-	public int currentSpell;
+	[SerializeField] private int currentSpell = 0;
 
-	private void Update () {
-		SpellController();
+	private void Start () {
+		SelectSpell();
 	}
 
-	public void LearnSpell (GameObject spell) {
-		Instantiate(spell, transform.position, transform.rotation, transform);
-		spells.Add(spell);
-	}
-
-	private void SpellController ()
+	private void Update ()
     {
-        if(spells.Count > 0)
-        {
-            ScrollController();
-            ScrollClamp();
-
-            spellEquipped = spells[currentSpell];
-        }
-
-		int spellNum = 0;
+        SpelLController();
     }
 
-    private void ScrollController () {
-		ScrollClamp();
+	public void LearnSpell (GameObject obj) {
+		GameObject go = Instantiate(obj, transform.position, transform.rotation, transform);
+	}
+
+    private void SpelLController()
+    {
+        int previousSpell = currentSpell;
         var msw = Input.GetAxis("Mouse ScrollWheel");
 
         if(msw > 0.0f)
         {
-            currentSpell++;
-
-        } else if(msw < 0.0f) {
-            currentSpell--;
+            if(currentSpell >= (transform.childCount - 1))
+                currentSpell = 0;
+            else
+                currentSpell++;
         }
+
+        if(msw < 0.0f)
+        {
+            if(currentSpell <= 0)
+                currentSpell = (transform.childCount - 1);
+            else
+                currentSpell--;
+        }
+
+        if(previousSpell != currentSpell)
+            SelectSpell();
     }
 
-    private void ScrollClamp () {
-		if(currentSpell < 0)
-		{	
-			currentSpell = (spells.Count - 1);
+    private void SelectSpell () {
+		int i = 0;
 
-		} else if(currentSpell == spells.Count) {
-			currentSpell = 0;
+		foreach(Transform tran in transform)
+		{
+			if(i == currentSpell)
+				tran.gameObject.SetActive(true);
+			else
+				tran.gameObject.SetActive(false);
+
+			i++;
 		}
 	}
 }

@@ -5,11 +5,11 @@ using UnityEngine;
 public class Scroll : MonoBehaviour {
 
 	[SerializeField] private GameObject spell;
-	private GameObject player;
+	private PlayerSpells playerSpells;
 	private NotificationSystem notificationSystem;
 
 	private void Awake () {
-		player = GameObject.FindWithTag("Player");
+		playerSpells = GameObject.FindWithTag("SpellContainer").GetComponent<PlayerSpells>();
 		notificationSystem = GameObject.FindWithTag("GameController").GetComponent<NotificationSystem>();
 	}
 
@@ -22,7 +22,7 @@ public class Scroll : MonoBehaviour {
 
 	private void LearnScroll () {
 		notificationSystem.Notify(spell.name);
-		player.GetComponent<PlayerSpells>().LearnSpell(spell);
+		playerSpells.GetComponent<PlayerSpells>().LearnSpell(spell);
 
 		Destroy(this.gameObject);
 	}
