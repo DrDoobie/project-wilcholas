@@ -776,8 +776,8 @@ GameObject:
   - component: {fileID: 4915459881222460}
   - component: {fileID: 114754585678871100}
   m_Layer: 9
-  m_Name: Spells
-  m_TagString: Untagged
+  m_Name: Spell Container
+  m_TagString: SpellContainer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

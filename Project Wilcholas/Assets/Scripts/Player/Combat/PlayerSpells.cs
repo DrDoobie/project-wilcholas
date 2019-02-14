@@ -16,7 +16,7 @@ public class PlayerSpells : MonoBehaviour {
     }
 
 	public void LearnSpell (GameObject obj) {
-		GameObject go = Instantiate(obj, transform.position, transform.rotation, transform);
+	    Instantiate(obj, transform.position, transform.rotation, transform);
 	}
 
     private void SpelLController()
