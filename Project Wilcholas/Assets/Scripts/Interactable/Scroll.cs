@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class Scroll : MonoBehaviour {
 
-	[SerializeField] private Component spell;
+	[SerializeField] private GameObject spell;
 	private GameObject player;
+	private NotificationSystem notificationSystem;
 
 	private void Awake () {
 		player = GameObject.FindWithTag("Player");
+		notificationSystem = GameObject.FindWithTag("GameController").GetComponent<NotificationSystem>();
 	}
 
 	private void OnTriggerEnter (Collider other) {
@@ -19,8 +21,9 @@ public class Scroll : MonoBehaviour {
 	}
 
 	private void LearnScroll () {
-		player.GetComponent<PlayerSpells>().spells.Add(spell);
-			GameObject.FindWithTag("GameController").GetComponent<NotificationSystem>().Notify("You learned an uknown spell!");
-				Destroy(this.gameObject);
+		notificationSystem.Notify(spell.name);
+		player.GetComponent<PlayerSpells>().LearnSpell(spell);
+
+		Destroy(this.gameObject);
 	}
 }
