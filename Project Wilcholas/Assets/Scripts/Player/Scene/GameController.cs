@@ -6,7 +6,8 @@ using UnityEngine.SceneManagement;
 public class GameController : MonoBehaviour {
 
 	[HideInInspector] public bool isPaused;
-	[HideInInspector] public int maxAI, currentAI;
+	[HideInInspector] public int currentAI;
+    public int maxAI;
 
 	private void Update () {
         PauseController();

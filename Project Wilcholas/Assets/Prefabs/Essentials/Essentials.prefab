@@ -2183,8 +2183,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isPaused: 0
-  maxAI: 3
   currentAI: 0
+  maxAI: 6
 --- !u!114 &114754585678871100
 MonoBehaviour:
   m_ObjectHideFlags: 1
