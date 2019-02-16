@@ -16,7 +16,7 @@ public class Interactable : MonoBehaviour {
 	private void Update () {
 		if((inRange) && (!interacted))
 		{
-			gameController.GetComponent<NotificationSystem>().DisplayText("'e'");
+			gameController.GetComponent<NotificationSystem>().DisplayText("'E' to interact");
 		
 			if(Input.GetButtonDown("Interact"))
 			{

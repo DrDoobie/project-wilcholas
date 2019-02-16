@@ -21,9 +21,10 @@ public class Scroll : MonoBehaviour {
 	}
 
 	private void LearnScroll () {
-		notificationSystem.Notify(spell.name);
-		playerSpells.GetComponent<PlayerSpells>().LearnSpell(spell);
+		string text = "You learned " + spell.name + "!";
+		notificationSystem.Notify(text);
 
+		playerSpells.GetComponent<PlayerSpells>().LearnSpell(spell);
 		Destroy(this.gameObject);
 	}
 }

@@ -44,7 +44,7 @@ public class PlayerExperience : MonoBehaviour {
 	}
 
 	private void UIController () {
-		levelIndicator.text = xpLevel.ToString();
+		levelIndicator.text = "Level " + xpLevel.ToString();
 		xpBar.maxValue = requiredXp;
 		xpBar.value = currentXp;
 

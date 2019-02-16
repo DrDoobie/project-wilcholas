@@ -22,7 +22,13 @@ public class NotificationSystem : MonoBehaviour {
 
 	private IEnumerator Notification (string text) {
 		isNotifying = true;
-		notificationsText.text = "You learned " + text + "!";
+		notificationsText.text = "";
+
+		foreach(char letter in text.ToCharArray())
+		{
+			notificationsText.text += letter;
+			yield return null;
+		}
 
 		yield return new WaitForSeconds(displayTime);
 
