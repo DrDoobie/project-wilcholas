@@ -11,7 +11,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ef01d806cdee0b4c80460fa7e5d30c1, type: 3}
   m_Name: Stat Upgrade
   m_EditorClassIdentifier: 
-  skillDescription: 10% Upgrade
+  skillDescription: '10%
+
+    inc.'
   function:
     m_PersistentCalls:
       m_Calls:

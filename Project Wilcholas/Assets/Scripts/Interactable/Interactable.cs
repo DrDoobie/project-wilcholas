@@ -14,14 +14,13 @@ public class Interactable : MonoBehaviour {
 	}
 
 	private void Update () {
-		if((inRange) && (!interacted))
+		if((inRange) && (!interacted) && (!gameController.GetComponent<GameController>().isPaused))
 		{
 			gameController.GetComponent<NotificationSystem>().DisplayText("'E' to interact");
 		
 			if(Input.GetButtonDown("Interact"))
 			{
-				interacted = true;
-				myEvent.Invoke();
+				Interact();
 			}
 		}
 
@@ -29,6 +28,11 @@ public class Interactable : MonoBehaviour {
 		{
 			gameController.GetComponent<NotificationSystem>().DisplayText("");
 		}
+	}
+
+	private void Interact () {
+		interacted = true;
+		myEvent.Invoke();
 	}
 
 	private void OnTriggerEnter (Collider other) {

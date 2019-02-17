@@ -51,7 +51,7 @@ public class PlayerExperience : MonoBehaviour {
 		if(skillTreeOpen)
 		{
 			window.SetActive(true);
-			skillPointsText.text = "Skill Points: " + skillPoints;
+			skillPointsText.text = skillPoints.ToString();
 			return;
 		}
 

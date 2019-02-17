@@ -89,8 +89,8 @@ MonoBehaviour:
   dialogue:
     name: Shadoop
     sentences:
-    - I fuck yo bitch
-    - and I fuck yo mama
+    - It's dangerous around here...
+    - so get out of here.
 --- !u!114 &114151911401121634
 MonoBehaviour:
   m_ObjectHideFlags: 1
