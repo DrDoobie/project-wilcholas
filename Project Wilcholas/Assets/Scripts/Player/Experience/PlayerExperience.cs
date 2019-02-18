@@ -10,22 +10,12 @@ public class PlayerExperience : MonoBehaviour {
 	private PlayerStats playerStats;
 	[SerializeField] private float multiplier = 1.25f;
 	[HideInInspector] public float xpLevel = 1.0f, requiredXp = 10.0f, currentXp = 0.0f;
-	[Header("Skill Tree")] public GameObject window;
-	public Text skillPointsText;
-	public int skillPoints;
-	private bool skillTreeOpen;
-
 
 	private void Awake () {
 		playerStats = GetComponent<PlayerStats>();
 	}
 
 	private void Update () {
-		if(Input.GetButtonDown("Skill Tree"))
-		{
-			skillTreeOpen = !skillTreeOpen;
-		}
-
 		LevelController();
 		UIController();
 	}
@@ -47,21 +37,11 @@ public class PlayerExperience : MonoBehaviour {
 		levelIndicator.text = "Level " + xpLevel.ToString();
 		xpBar.maxValue = requiredXp;
 		xpBar.value = currentXp;
-
-		if(skillTreeOpen)
-		{
-			window.SetActive(true);
-			skillPointsText.text = skillPoints.ToString();
-			return;
-		}
-
-		window.SetActive(false);
 	}
 
 	private void LevelUp ()
     {
         xpLevel++;
-		skillPoints++;
         currentXp = 0.0f;
         requiredXp *= multiplier;
         FillStats();

@@ -11,6 +11,7 @@ TagManager:
   - CoinsIndicator
   - PostProcessVolume
   - SpellContainer
+  - SoulIndicator
   layers:
   - Default
   - TransparentFX
