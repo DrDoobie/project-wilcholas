@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerSouls : MonoBehaviour {
 
 	[HideInInspector] public bool soulReady;
+	public GameObject spellsPanel;
 	private GameObject soulIndicator;
 
 	private void Start () {
@@ -14,7 +15,7 @@ public class PlayerSouls : MonoBehaviour {
 	private void Update () {
 		Indicator();
 	}
-
+	
 	private void Indicator () {
 		if(soulReady)
 		{
