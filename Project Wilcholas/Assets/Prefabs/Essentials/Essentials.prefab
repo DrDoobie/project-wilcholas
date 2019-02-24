@@ -340,7 +340,7 @@ GameObject:
   m_Component:
   - component: {fileID: 224479063082315968}
   m_Layer: 5
-  m_Name: Magic
+  m_Name: Spells
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -408,7 +408,7 @@ GameObject:
   - component: {fileID: 114141936351904932}
   - component: {fileID: 114631770799341844}
   m_Layer: 5
-  m_Name: LayoutOptions
+  m_Name: Spells
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1597,7 +1597,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   soulReady: 0
-  spellsPanel: {fileID: 0}
+  spellsPanel: {fileID: 1405544760187942}
 --- !u!114 &114439569504148600
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1858,11 +1858,23 @@ MonoBehaviour:
     m_HighlightedTrigger: Highlighted
     m_PressedTrigger: Pressed
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 114652887888889088}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 114754585678871100}
+        m_MethodName: LearnSpell
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1767686643788020, guid: aa86430e6496fef41a947d66ff397bdf,
+            type: 2}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &114576488329715720
@@ -2568,7 +2580,7 @@ RectTransform:
   m_Children:
   - {fileID: 224191426158189120}
   m_Father: {fileID: 224936227257096934}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -2833,7 +2845,7 @@ RectTransform:
   m_Children:
   - {fileID: 224072442559931196}
   m_Father: {fileID: 224936227257096934}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -3073,8 +3085,8 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 224012970586051384}
-  - {fileID: 224159689279352898}
   - {fileID: 224479063082315968}
+  - {fileID: 224159689279352898}
   - {fileID: 4047445211406642}
   m_Father: {fileID: 4270558696844288}
   m_RootOrder: 2
