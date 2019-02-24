@@ -1,15 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Scroll : MonoBehaviour {
 
 	[SerializeField] private GameObject spell;
-	private PlayerSpells playerSpells;
 	private NotificationSystem notificationSystem;
 
 	private void Awake () {
-		playerSpells = GameObject.FindWithTag("SpellContainer").GetComponent<PlayerSpells>();
 		notificationSystem = GameObject.FindWithTag("GameController").GetComponent<NotificationSystem>();
 	}
 
@@ -24,7 +23,7 @@ public class Scroll : MonoBehaviour {
 		string text = "You learned " + spell.name + "!";
 		notificationSystem.Notify(text);
 
-		playerSpells.GetComponent<PlayerSpells>().LearnSpell(spell);
+		spell.GetComponent<Button>().interactable = true;
 		Destroy(this.gameObject);
 	}
 }

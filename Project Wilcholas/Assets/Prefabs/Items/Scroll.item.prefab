@@ -39,9 +39,9 @@ GameObject:
   - component: {fileID: 224752101849164060}
   - component: {fileID: 135132649966961686}
   - component: {fileID: 114897366993239706}
-  - component: {fileID: 114641257601358362}
+  - component: {fileID: 114751133866440854}
   m_Layer: 0
-  m_Name: Scroll_1.item
+  m_Name: Scroll.item
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -78,7 +78,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &114641257601358362
+--- !u!114 &114751133866440854
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -86,11 +86,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1665866694439784}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 13b2bd54a1a00564f80a8464edab6e64, type: 3}
+  m_Script: {fileID: 11500000, guid: 50904f2c954c53f40bda92223d77f4da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spell: {fileID: 1767686643788020, guid: aa86430e6496fef41a947d66ff397bdf, type: 2}
-  spellContainer: {fileID: 0}
+  spell: {fileID: 0}
 --- !u!114 &114897366993239706
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class PlayerSpells : MonoBehaviour {
 
+    private PlayerSouls playerSouls;
 	[SerializeField] private int currentSpell = 0;
 
 	private void Start () {
+        playerSouls = FindObjectOfType<PlayerSouls>();
 		SelectSpell();
 	}
 
@@ -16,7 +18,11 @@ public class PlayerSpells : MonoBehaviour {
     }
 
 	public void LearnSpell (GameObject obj) {
-	    Instantiate(obj, transform.position, transform.rotation, transform);
+	    if(playerSouls.soulReady)
+        {
+            Instantiate(obj, transform.position, transform.rotation, transform);
+            playerSouls.soulReady = false;
+        }
 	}
 
     private void SpelLController()
