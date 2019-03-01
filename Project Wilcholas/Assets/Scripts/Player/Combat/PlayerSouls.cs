@@ -21,11 +21,23 @@ public class PlayerSouls : MonoBehaviour {
 	private void WindowController () {
 		if(Input.GetButtonDown("Spells"))
 		{
+			if(!open)
+			{
+				FindObjectOfType<GameController>().isPaused = true;
+				open = true;
+				return;
+			} 
+
 			open = !open;
 		}
 
 		if(open)
 		{
+			if(Input.GetButtonDown("Pause"))
+			{
+				open = false;
+			}
+
 			spellsPanel.SetActive(true);
 			return;
 		}
