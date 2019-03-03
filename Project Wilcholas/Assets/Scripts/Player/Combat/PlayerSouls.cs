@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerSouls : MonoBehaviour {
 
-	[HideInInspector] public bool soulReady;
+	public bool soulReady;
 	public GameObject spellsPanel;
 	private GameObject soulIndicator;
 	private bool open = false;
