@@ -44,7 +44,7 @@ public class PlayerSouls : MonoBehaviour {
 
 		spellsPanel.SetActive(false);
 	}
-	
+
 	private void Indicator () {
 		if(soulReady)
 		{
