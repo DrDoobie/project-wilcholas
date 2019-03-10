@@ -8,11 +8,13 @@ public class AICombat : MonoBehaviour {
 	public GameObject prefab;
     public AIMotor motor;
     public NavMeshAgent agent;
+    private Transform player;
 	[SerializeField] private float shootSpeed, force = 5.0f;
 	private float ogShootSpeed;
 
 	private void Awake () {
 		ogShootSpeed = shootSpeed;
+        player = GameObject.FindWithTag("Player").transform;
 	}
 
 	private void Update () {
