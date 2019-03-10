@@ -5,7 +5,7 @@ using UnityEngine;
 public class AICombat : MonoBehaviour {
 
 	public GameObject prefab;
-	[SerializeField] private float force, shootSpeed;
+	[SerializeField] private float shootSpeed;
 	private float ogShootSpeed;
 
 	private void Awake () {

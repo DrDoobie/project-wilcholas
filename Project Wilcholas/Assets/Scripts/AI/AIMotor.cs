@@ -5,7 +5,7 @@ using UnityEngine.AI;
 
 public class AIMotor : MonoBehaviour {
 
-	[HideInInspector] public bool agro = false;
+	public bool agro = false;
 	[SerializeField] private float wanderTime = 3.0f, wanderRadius = 20.0f;
 	private NavMeshAgent agent;
 	private GameController gc;

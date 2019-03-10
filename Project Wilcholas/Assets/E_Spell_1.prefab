@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4706764263939732}
   - component: {fileID: 198326846112688422}
   - component: {fileID: 199795606921872894}
-  m_Layer: 11
+  m_Layer: 0
   m_Name: Graphics
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36,11 +36,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4221055005155982}
-  - component: {fileID: 135017888548022112}
   - component: {fileID: 54957206479303258}
-  - component: {fileID: 114492436111636434}
+  - component: {fileID: 135036059514075258}
   - component: {fileID: 114581222374049262}
-  m_Layer: 11
+  - component: {fileID: 114492436111636434}
+  - component: {fileID: 114649478849297444}
+  m_Layer: 0
   m_Name: E_Spell_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -54,7 +55,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1273168940958568}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -1.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4706764263939732}
@@ -102,7 +103,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   followPlayer: 1
   target: {fileID: 0}
-  speed: 1
+  speed: 0.75
 --- !u!114 &114581222374049262
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -115,14 +116,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destructTime: 1
---- !u!135 &135017888548022112
+--- !u!114 &114649478849297444
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1273168940958568}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c145e186dd90628419c02739d7585060, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 1
+--- !u!135 &135036059514075258
 SphereCollider:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1273168940958568}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5

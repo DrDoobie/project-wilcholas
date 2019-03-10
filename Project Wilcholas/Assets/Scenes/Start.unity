@@ -388,10 +388,25 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 114307031107239100, guid: 8568c2fcc98db9b4e8c761152fca1051,
+        type: 2}
+      propertyPath: shootSpeed
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114307031107239100, guid: 8568c2fcc98db9b4e8c761152fca1051,
+        type: 2}
+      propertyPath: force
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114302532594496732, guid: 8568c2fcc98db9b4e8c761152fca1051,
+        type: 2}
+      propertyPath: agro
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8568c2fcc98db9b4e8c761152fca1051, type: 2}
   m_IsPrefabAsset: 0
---- !u!1001 &873417695
+--- !u!1001 &826402205
 Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -430,7 +445,18 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 136399529608445720, guid: 0519a53c4b10f134b8e7489b10575244,
+        type: 2}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 136399529608445720, guid: 0519a53c4b10f134b8e7489b10575244,
+        type: 2}
+      propertyPath: m_Height
+      value: 2
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 136399529608445720, guid: 0519a53c4b10f134b8e7489b10575244, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: 0519a53c4b10f134b8e7489b10575244, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1 &896525918
@@ -1120,7 +1146,7 @@ SpriteRenderer:
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1221215956792514, guid: 0519a53c4b10f134b8e7489b10575244,
     type: 2}
-  m_PrefabInternal: {fileID: 873417695}
+  m_PrefabInternal: {fileID: 826402205}
 --- !u!1 &1958168898
 GameObject:
   m_ObjectHideFlags: 0

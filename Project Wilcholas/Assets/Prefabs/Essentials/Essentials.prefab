@@ -579,6 +579,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4410925585868280}
   - component: {fileID: 143842113536334722}
+  - component: {fileID: 136399529608445720}
   - component: {fileID: 114095620261659332}
   - component: {fileID: 114998328529844404}
   - component: {fileID: 114382028575646622}
@@ -2283,6 +2284,19 @@ MonoBehaviour:
   healthBar: {fileID: 114075093737165596}
   staminaBar: {fileID: 114349529369085628}
   manaBar: {fileID: 114773712862484428}
+--- !u!136 &136399529608445720
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1737055683341570}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 1
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!143 &143842113536334722
 CharacterController:
   m_ObjectHideFlags: 1
