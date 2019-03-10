@@ -20,19 +20,23 @@ public class AICombat : MonoBehaviour {
 		AIMotor motor = GetComponent<AIMotor>();
 
 		if(motor.agro)
-		{	
-			shootSpeed -= Time.deltaTime;
+        {
+            ShootController();
+        }
+    }
 
-			if(shootSpeed < 0.0f)
-			{
-				Shoot();
-				shootSpeed = ogShootSpeed;
-			}
-		}
-	}
+    private void ShootController()
+    {
+        shootSpeed -= Time.deltaTime;
 
-	private void Shoot () {
-		GameObject go = Instantiate(prefab, transform.position, transform.rotation, transform);
-		go.GetComponent<Rigidbody>().AddForce((transform.forward * force) * 100.0f);
+        if(shootSpeed < 0.0f)
+        {
+            Shoot();
+            shootSpeed = ogShootSpeed;
+        }
+    }
+
+    private void Shoot () {
+		Instantiate(prefab, transform.position, transform.rotation, transform);
 	}
 }
