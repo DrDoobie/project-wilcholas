@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class AIProjectile : MonoBehaviour {
 
+	public GameObject impactEffect;
 	public float damage;
 
 	private void OnTriggerEnter(Collider other)
@@ -11,7 +12,9 @@ public class AIProjectile : MonoBehaviour {
 		if(other.tag == "Player")
 		{
 			other.GetComponent<PlayerStats>().health -= damage;
-			Destroy(gameObject, 0.1f);
 		}
+
+		Instantiate(impactEffect, transform.position, transform.rotation);
+		Destroy(gameObject, 0.1f);
 	}
 }

@@ -1,11 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class AICombat : MonoBehaviour {
 
 	public GameObject prefab;
-	[SerializeField] private float shootSpeed;
+    public AIMotor motor;
+	[SerializeField] private float shootSpeed, force;
 	private float ogShootSpeed;
 
 	private void Awake () {
@@ -17,8 +19,6 @@ public class AICombat : MonoBehaviour {
 	}
 
 	private void CombatController () {
-		AIMotor motor = GetComponent<AIMotor>();
-
 		if(motor.agro)
         {
             ShootController();
@@ -37,6 +37,7 @@ public class AICombat : MonoBehaviour {
     }
 
     private void Shoot () {
-		Instantiate(prefab, transform.position, transform.rotation, transform);
+		GameObject go = Instantiate(prefab, transform.position, transform.rotation, transform);
+        go.GetComponent<Rigidbody>().AddForce((transform.forward * force) * 100.0f);
 	}
 }

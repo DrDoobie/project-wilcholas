@@ -11,9 +11,9 @@ public class AIMotor : MonoBehaviour {
 	private GameController gc;
 
 	private void Awake () {
-		agent = gameObject.GetComponent<NavMeshAgent>();
-		gc = GameObject.FindWithTag("GameController").GetComponent<GameController>();
-		gc.currentAI++;
+			agent = gameObject.GetComponent<NavMeshAgent>();
+			gc = GameObject.FindWithTag("GameController").GetComponent<GameController>();
+			gc.currentAI++;
 
 		StartCoroutine(Wander());
 	}
@@ -36,10 +36,10 @@ public class AIMotor : MonoBehaviour {
 	}
 
 	public static Vector3 RandomNavSphere (Vector3 origin, float radius, int layermask) {
-        Vector3 randDirection = Random.insideUnitSphere * radius;
+    Vector3 randDirection = Random.insideUnitSphere * radius;
 		randDirection += origin;
 		NavMeshHit navHit;
 		NavMesh.SamplePosition (randDirection, out navHit, radius, layermask);
 		return navHit.position;
-    }
+  }
 }
