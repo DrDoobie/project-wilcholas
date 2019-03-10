@@ -40,7 +40,7 @@ GameObject:
   - component: {fileID: 54957206479303258}
   - component: {fileID: 114859791545950462}
   m_Layer: 10
-  m_Name: Spell_1
+  m_Name: Spell_1_World
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -7,7 +7,8 @@ public class AICombat : MonoBehaviour {
 
 	public GameObject prefab;
     public AIMotor motor;
-	[SerializeField] private float shootSpeed, force;
+    public NavMeshAgent agent;
+	[SerializeField] private float shootSpeed, force = 5.0f;
 	private float ogShootSpeed;
 
 	private void Awake () {
@@ -19,7 +20,7 @@ public class AICombat : MonoBehaviour {
 	}
 
 	private void CombatController () {
-		if(motor.agro)
+		if(motor.agro && (agent.velocity == Vector3.zero))
         {
             ShootController();
         }
