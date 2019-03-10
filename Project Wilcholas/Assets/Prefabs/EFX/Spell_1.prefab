@@ -38,7 +38,7 @@ GameObject:
   - component: {fileID: 4221055005155982}
   - component: {fileID: 135017888548022112}
   - component: {fileID: 54957206479303258}
-  - component: {fileID: 114829428345425558}
+  - component: {fileID: 114859791545950462}
   m_Layer: 10
   m_Name: Spell_1
   m_TagString: Untagged
@@ -88,7 +88,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 2
---- !u!114 &114829428345425558
+--- !u!114 &114859791545950462
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -96,15 +96,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 1273168940958568}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8424bdcd61ad4134b8e6bc499e1fb590, type: 3}
+  m_Script: {fileID: 11500000, guid: 59980698c28f2364896be0ee76f7a77c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   impactEffect: {fileID: 1083511230053142, guid: f10d126207df7ca499188784681de119,
     type: 2}
   dmgPopup: {fileID: 1324299359626504, guid: ffd006e4c26ae644ba7b9238133143ad, type: 2}
-  minDamg: 12
-  maxDamg: 7
-  selfDestructTime: 3
+  minDamg: 7
+  maxDamg: 12
+  selfDestructTime: 1
 --- !u!135 &135017888548022112
 SphereCollider:
   m_ObjectHideFlags: 1

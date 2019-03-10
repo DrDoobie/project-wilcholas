@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4706764263939732}
   - component: {fileID: 198326846112688422}
   - component: {fileID: 199795606921872894}
-  m_Layer: 10
+  m_Layer: 11
   m_Name: Graphics
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38,8 +38,8 @@ GameObject:
   - component: {fileID: 4221055005155982}
   - component: {fileID: 135017888548022112}
   - component: {fileID: 54957206479303258}
-  - component: {fileID: 114829428345425558}
-  m_Layer: 10
+  - component: {fileID: 114172869144984962}
+  m_Layer: 11
   m_Name: Spell_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -88,7 +88,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 2
---- !u!114 &114829428345425558
+--- !u!114 &114172869144984962
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -96,15 +96,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 1273168940958568}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8424bdcd61ad4134b8e6bc499e1fb590, type: 3}
+  m_Script: {fileID: 11500000, guid: 59980698c28f2364896be0ee76f7a77c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  impactEffect: {fileID: 1608730976061270, guid: c46a446c25d3ae449a6108ba0aa41814,
+  enemyProjectile: 1
+  impactEffect: {fileID: 1083511230053142, guid: f10d126207df7ca499188784681de119,
     type: 2}
   dmgPopup: {fileID: 1324299359626504, guid: ffd006e4c26ae644ba7b9238133143ad, type: 2}
-  minDamg: 30
-  maxDamg: 15
-  selfDestructTime: 6
+  minDamg: 7
+  maxDamg: 12
+  selfDestructTime: 1
 --- !u!135 &135017888548022112
 SphereCollider:
   m_ObjectHideFlags: 1

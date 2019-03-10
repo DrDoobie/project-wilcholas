@@ -41,6 +41,7 @@ GameObject:
   - component: {fileID: 135420431805593708}
   - component: {fileID: 114302532594496732}
   - component: {fileID: 114450543681252622}
+  - component: {fileID: 114307031107239100}
   m_Layer: 11
   m_Name: Bat
   m_TagString: Enemy
@@ -167,7 +168,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1257307913293794}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -3.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4001624084712784}
@@ -250,6 +251,20 @@ MonoBehaviour:
   agro: 0
   wanderTime: 3
   wanderRadius: 20
+--- !u!114 &114307031107239100
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1257307913293794}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f8d7ab8ef81b004ca112c6862b9acf1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 1273168940958568, guid: 7addfa63e07280241882aa6afaa0fb19, type: 2}
+  force: 10
+  shootSpeed: 3
 --- !u!114 &114315889924717212
 MonoBehaviour:
   m_ObjectHideFlags: 1
